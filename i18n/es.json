@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "solution": "SOLUCIÓN",
+    "how-works": "¿CÓMO FUNCIONA?",
+    "team": "SOBRE EL EQUIPO",
+    "product": "SOBRE EL PRODUCTO",
+    "faq": "PREGUNTAS FRECUENTES",
+    "signin": "INGRESAR",
+    "pricing": "PRECIO"
+  },
+  "banner": {
+    "title-line1": "MALLA",
+    "title-line2": "DE",
+    "title-line3": "SEGURIDAD DIGITAL",
+    "subtitle": "Prevención de colisiones en tiempo real",
+    "cta": "Suscríbete Ahora"
+  },
+  "solution": {
+    "tag": "Solución",
+    "heading": "¿POR QUÉ <span class=\"accent\">ELEGIRNOS</span>?",
+    "warning1-title": "Colisión Inminente",
+    "warning1-text": "Vehículo liviano detectado en ruta de camión autónomo — Sector Norte",
+    "warning2-title": "Zona Restringida",
+    "warning2-text": "Ingreso no autorizado detectado en corredor de tránsito autónomo activo",
+    "warning3-title": "Alerta Generada",
+    "warning3-text": "Notificación enviada al conductor y al centro de control en 43ms",
+    "body1": "En las modernas operaciones de minería a cielo abierto, los vehículos autónomos de alto tonelaje operan en rutas definidas con velocidades y cargas que hacen imposible una parada de emergencia convencional. Cuando un vehículo liviano operado por pasajeros invade estas rutas, el riesgo de colisión es inmediato y potencialmente fatal.",
+    "body2": "Nuestra propuesta está dirigida principalmente a empresas mineras a cielo abierto que operan flotas autónomas, así como a conductores de vehículos livianos que interactúan con estas rutas. Para las empresas, Vertex representa una solución que reduce accidentes, previene pérdidas económicas por tiempo de inactividad y refuerza el cumplimiento de las normas de seguridad. Para los conductores, proporciona una herramienta intuitiva que mejora su conciencia del entorno sin causar distracciones.",
+    "mission-label": "Misión",
+    "mission-text": "Proveer soluciones tecnológicas basadas en IoT que permitan la prevención de accidentes en entornos mineros mediante sistemas de monitoreo en tiempo real y alertas tempranas, protegiendo la vida de los trabajadores y optimizando la seguridad operacional.",
+    "vision-label": "Visión",
+    "vision-text": "Convertirnos en la solución de seguridad inteligente líder para operaciones mineras autónomas a nivel global, impulsando la transformación digital del sector hacia entornos más seguros, eficientes y confiables."
+  },
+  "how-it-works": {
+    "tag": "Cómo funciona",
+    "body1": "Vertex surge como una startup tecnológica enfocada en la prevención de colisiones en entornos mineros mediante la implementación de una Malla de Seguridad Digital, diseñada para detectar incursiones peligrosas en rutas de transporte autónomo y generar alertas en tiempo real.",
+    "body2": "Ayudamos a 2 sectores de la industria minera:",
+    "card1-number": "01",
+    "card1-title": "Empresas de Minería a Cielo Abierto",
+    "card1-desc": "Operadores de flotas autónomas que buscan reducir accidentes, evitar tiempos de inactividad operacional y fortalecer sus estándares de seguridad.",
+    "card1-benefit1": "Reducción de accidentes y costos asociados",
+    "card1-benefit2": "Continuidad operacional garantizada",
+    "card1-benefit3": "Cumplimiento de normas internacionales de seguridad",
+    "card1-benefit4": "Visibilidad total del entorno operativo",
+    "card1-benefit5": "ROI positivo desde el primer mes",
+    "card2-number": "02",
+    "card2-title": "Conductores de Vehículos Livianos",
+    "card2-desc": "Personal que opera en zonas compartidas con maquinaria autónoma y requiere información en tiempo real sin distracciones adicionales.",
+    "card2-benefit1": "Alertas intuitivas y no intrusivas",
+    "card2-benefit2": "Mayor conciencia situacional del entorno",
+    "card2-benefit3": "Reducción del estrés en zonas de alto riesgo",
+    "card2-benefit4": "Protección activa durante todo el turno",
+    "card2-benefit5": "Interfaz simple con curva de aprendizaje cero"
+  },
+  "team": {
+    "tag": "Sobre el equipo",
+    "heading": "Conoce al equipo detrás de Vertex",
+    "subheading": "Un equipo multidisciplinario dedicado a transformar la industria minera mediante soluciones inteligentes.",
+    "placeholder": "PRÓXIMAMENTE..."
+  },
+  "product": {
+    "tag": "Sobre el producto",
+    "placeholder": "PRÓXIMAMENTE..."
+  },
+  "faq": {
+    "tag": "Preguntas Frecuentes",
+    "q1": "¿Cómo se integra MineGuard con las flotas autónomas existentes?",
+    "a1": "MineGuard utiliza protocolos de comunicación estándar de la industria (V2X) para conectarse con los Sistemas de Gestión de Flotas (FMS). Se instala de forma no intrusiva y actúa como una capa de seguridad adicional que visualiza datos en tiempo real.",
+    "q2": "¿Cuál es el nivel de precisión del sistema de posicionamiento?",
+    "a2": "Utilizamos tecnología GNSS de alta precisión con correcciones RTK, lo que permite una precisión a nivel de centímetros. Esto es crucial para la interacción segura entre vehículos livianos y gigantes mineros.",
+    "q3": "¿Funciona en zonas sin cobertura de internet convencional?",
+    "a3": "Sí. MineGuard está diseñado para operar en redes LTE/5G privadas mineras y puede funcionar en modo local (Red Mesh) para garantizar que las alertas críticas de proximidad se emitan incluso sin conexión a un servidor central.",
+    "q4": "¿Cuál es el plazo de implementación del sistema?",
+    "a4": "Una implementación estándar para una flota de 20 vehículos livianos toma aproximadamente 2 semanas, incluyendo la calibración del entorno digital y la capacitación del personal."
+  },
+  "subscription": {
+    "tag": "Suscripción",
+    "alert": "● Alerta activa",
+    "plan-tag": "Empresarial",
+    "plan-name": "Suite de Seguridad Completa",
+    "currency": "$",
+    "amount": "200",
+    "period": "/por unidad/mes",
+    "feature1": "Instalación Profesional de Sensores",
+    "feature2": "Rango y Capacidad Máxima de Detección",
+    "feature3": "Mapa de Monitoreo en Tiempo Real (24/7)",
+    "feature4": "Protocolo Anti-Colisión V2X",
+    "feature5": "Almacenamiento en la Nube y Analítica de Datos",
+    "cta": "Suscríbete Ahora",
+    "footer-note": "Sin cargos ocultos. Soporte técnico completo incluido."
+  },
+  "footer": {
+    "tagline": "Elevando la seguridad en operaciones autónomas mediante tecnología de alta precisión y conectividad en tiempo real.",
+    "col1-title": "Soluciones",
+    "col1-link1": "Tecnología",
+    "col1-link2": "Público Objetivo",
+    "col1-link3": "FAQ",
+    "col2-title": "Empresa",
+    "col2-link1": "Sobre el equipo",
+    "col2-link2": "Política de Privacidad",
+    "col2-link3": "Suscripción",
+    "col3-title": "Contáctanos",
+    "copyright": "&copy; 2024 MineGuard. Todos los derechos reservados.",
+    "terms": "Términos de Servicio",
+    "cookies": "Política de Cookies"
+  }
+}
