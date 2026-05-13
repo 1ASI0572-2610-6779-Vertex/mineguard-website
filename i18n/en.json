@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "solution": "SOLUTION",
+    "how-works": "HOW IT WORKS?",
+    "team": "ABOUT THE TEAM",
+    "product": "ABOUT THE PRODUCT",
+    "faq": "FAQ",
+    "signin": "SIGN IN",
+    "pricing": "PRICING"
+  },
+  "banner": {
+    "title-line1": "DIGITAL",
+    "title-line2": "SAFETY",
+    "title-line3": "MESH",
+    "subtitle": "Real-time collision prevention",
+    "cta": "Subscribe Now"
+  },
+  "solution": {
+    "tag": "Solution",
+    "heading": "WHY <span class=\"accent\">CHOOSE US</span>?",
+    "warning1-title": "Imminent Collision",
+    "warning1-text": "Light vehicle detected in autonomous truck route — North Sector",
+    "warning2-title": "Restricted Zone",
+    "warning2-text": "Unauthorized entry detected in active autonomous traffic corridor",
+    "warning3-title": "Alert Generated",
+    "warning3-text": "Notification sent to driver and control center in 43ms",
+    "body1": "In modern open-pit mining operations, high-tonnage autonomous vehicles operate on defined routes with speeds and loads that make a conventional emergency stop impossible. When a passenger-operated light vehicle invades these routes, the risk of collision is immediate and potentially fatal.",
+    "body2": "Our proposal is primarily aimed at open-pit mining companies that operate autonomous fleets, as well as drivers of light vehicles who interact with these routes. For companies, Vertex represents a solution that reduces accidents, prevents economic losses due to downtime, and strengthens compliance with safety standards. For drivers, it provides an intuitive tool that improves their awareness of their surroundings without causing distractions.",
+    "mission-label": "Mission",
+    "mission-text": "Provide IoT-based technological solutions that enable the prevention of accidents in mining environments through real-time monitoring and early warning systems, protecting the lives of workers and optimizing operational safety.",
+    "vision-label": "Vision",
+    "vision-text": "Become the leading smart security solution for autonomous mining operations globally, driving the digital transformation of the sector towards safer, more efficient and reliable environments."
+  },
+  "how-it-works": {
+    "tag": "How it works",
+    "body1": "Vertex emerges as a technology startup focused on preventing collisions in mining environments through the implementation of a Digital Safety Mesh, designed to detect dangerous incursions into autonomous transport routes and generate real-time alerts.",
+    "body2": "We help 2 sectors in the mining industry:",
+    "card1-number": "01",
+    "card1-title": "Open-Pit Mining Companies",
+    "card1-desc": "Autonomous fleet operators seeking to reduce accidents, avoid operational downtime, and strengthen their safety standards.",
+    "card1-benefit1": "Reduction in accidents and associated costs",
+    "card1-benefit2": "Guaranteed operational continuity",
+    "card1-benefit3": "Compliance with international safety standards",
+    "card1-benefit4": "Total visibility of the operating environment",
+    "card1-benefit5": "Positive ROI from the first month",
+    "card2-number": "02",
+    "card2-title": "Light Vehicle Drivers",
+    "card2-desc": "Personnel operating in shared zones with autonomous machinery who require real-time information without additional distractions.",
+    "card2-benefit1": "Intuitive and non-intrusive alerts",
+    "card2-benefit2": "Improved situational awareness of the environment",
+    "card2-benefit3": "Reduced stress in high-risk zones",
+    "card2-benefit4": "Active protection throughout the entire shift",
+    "card2-benefit5": "Simple interface with zero learning curve"
+  },
+  "team": {
+    "tag": "About the team",
+    "heading": "Meet the team behind Vertex",
+    "subheading": "A multidisciplinary team dedicated to transforming the mining industry through smart solutions.",
+    "placeholder": "COMING SOON..."
+  },
+  "product": {
+    "tag": "About the product",
+    "placeholder": "COMING SOON..."
+  },
+  "faq": {
+    "tag": "Frequently Asked Questions",
+    "q1": "How does MineGuard integrate with existing autonomous fleets?",
+    "a1": "MineGuard uses industry-standard communication protocols (V2X) to connect with Fleet Management Systems (FMS). It is installed non-intrusively and acts as an additional safety layer that visualizes real-time data.",
+    "q2": "What is the precision level of the positioning system?",
+    "a2": "We utilize high-precision GNSS technology with RTK corrections, allowing for centimeter-level accuracy. This is crucial for safe interaction between light vehicles and mining giants.",
+    "q3": "Does it work in areas without conventional internet coverage?",
+    "a3": "Yes. MineGuard is designed to operate on private LTE/5G mining networks and can work in local mode (Mesh Network) to ensure that critical proximity alerts are issued even without a central server connection.",
+    "q4": "What is the implementation timeframe for the system?",
+    "a4": "A standard implementation for a fleet of 20 light vehicles takes approximately 2 weeks, including digital environment calibration and personnel training."
+  },
+  "subscription": {
+    "tag": "Subscription",
+    "alert": "● Alert active",
+    "plan-tag": "Enterprise",
+    "plan-name": "Full Safety Suite",
+    "currency": "$",
+    "amount": "200",
+    "period": "/per unit/mo",
+    "feature1": "Professional Sensor Installation",
+    "feature2": "Maximum Detection Range & Capacity",
+    "feature3": "Real-Time Monitoring Map (24/7)",
+    "feature4": "V2X Anti-Collision Protocol",
+    "feature5": "Cloud Data Storage & Analytics",
+    "cta": "Subscribe Now",
+    "footer-note": "No hidden fees. Full technical support included."
+  },
+  "footer": {
+    "tagline": "Elevating safety in autonomous operations through high-precision technology and real-time connectivity.",
+    "col1-title": "Solutions",
+    "col1-link1": "Technology",
+    "col1-link2": "Target Audience",
+    "col1-link3": "FAQ",
+    "col2-title": "Company",
+    "col2-link1": "About the team",
+    "col2-link2": "Privacy Policy",
+    "col2-link3": "Subscription",
+    "col3-title": "Get in Touch",
+    "copyright": "&copy; 2024 MineGuard. All rights reserved.",
+    "terms": "Terms of Service",
+    "cookies": "Cookies Policy"
+  }
+}
