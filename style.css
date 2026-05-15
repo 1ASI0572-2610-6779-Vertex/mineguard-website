@@ -777,3 +777,190 @@ nav {
   transform: rotate(45deg);
 }
 
+/*Subscription*/
+#subscription {
+    padding: 60px 20px;
+    width: 100vw;
+    background: var(--black);
+}
+    
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.pricing-card {
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: var(--glow); 
+}
+
+.plan-tag {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.plan-price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: super;
+}
+
+.period {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.plan-features li {
+  color: var(--text);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feature-icon {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.subscribe-button-card {
+  width: 100%;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-button-card:hover {
+  background: rgba(0, 213, 255, 0.164);
+  color: #fff;
+}
+
+.card-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+/* MESH VISUALIZATION */
+.mesh-visual {
+    position: absolute;
+    height: 480px;
+    display: flex;
+    width: 35%;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.mesh-container {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+.mesh-node {
+    position: absolute;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 20px var(--accent);
+}
+
+.mesh-node::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,212,255,0.3);
+    animation: ripple 2s ease-out infinite;
+}
+
+@keyframes ripple {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+.mesh-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vehicle-icon {
+    position: absolute;
+    font-size: 28px;
+    animation: moveVehicle 6s linear infinite;
+}
+
+@keyframes moveVehicle {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(60px, 20px); }
+    50% { transform: translate(30px, 60px); }
+    75% { transform: translate(-20px, 30px); }
+    100% { transform: translate(0,0); }
+}
+
+.alert-badge {
+    position: absolute;
+    top: 30px; right: 20px;
+    background: rgba(255,0,60,0.15);
+    border: 1px solid rgba(255,0,60,0.5);
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ff003c;
+    animation: alertPulse 2s ease-in-out infinite;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+
+@keyframes alertPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
