@@ -95,6 +95,7 @@ nav {
     background: rgba(5,8,16,0.85);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
+
 }
 
 .nav-logo {
@@ -194,6 +195,10 @@ nav {
   color: #000;
 }
 
+nav a{
+  list-style: none;
+  text-decoration: none;
+}
 
 
 
