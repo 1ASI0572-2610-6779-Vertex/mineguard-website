@@ -1,101 +1,145 @@
-# MineGuard Landing Page (`mineguard-website`)
+# MineGuard — Digital Safety Mesh
 
-## Overview
-`mineguard-website` is the public-facing marketing landing page for the MineGuard mining safety platform, developed by Vertex. The site introduces the product to open-pit mining companies and light-vehicle operators, presenting the Digital Safety Mesh, the value proposition, target audience, team, pricing, frequently asked questions, and legal information.
+Public-facing marketing landing page for the **MineGuard** mining safety platform, developed by **Vertex**. Presents the Digital Safety Mesh value proposition to open-pit mining operators, fleet supervisors, and light-vehicle drivers.
 
-The site is a static, multi-section single-page experience built with plain HTML, CSS, and JavaScript. It is intended to be served as a static asset and does not depend on any backend services.
+Static site — no build step, no backend dependency.
 
-## Features
-- Hero banner with looping background video and animated SVG accent shapes
-- Solution section highlighting collision-prevention warnings, mission and vision
-- "How it works" section describing the two target sectors of the mining industry
-- About the team and About the product placeholder sections
-- FAQ section using native `<details>`/`<summary>` accordions
-- Subscription / pricing section with a Digital Safety Mesh visualization
-- Terms and Conditions page (`terms.html`) reachable from the footer
-- Internationalization with English and Spanish JSON resources
-- Client-side language switcher driven by `data-section` / `data-value` attributes
-- Responsive layout adapted to desktop and mobile breakpoints
+---
 
-## Current Scope
-The currently published pages expose:
-- `index.html` — main landing page (hero, solution, how it works, team, product, FAQ, subscription, footer)
-- `terms.html` — Terms and Conditions
+## Pages
 
-The team and product sections currently show "Coming soon" placeholders and will be populated in upcoming iterations.
+| File | Description |
+|---|---|
+| `index.html` | Main landing page |
+| `terms.html` | Terms & Conditions (full visual parity with main page) |
+
+---
+
+## Sections (`index.html`)
+
+| Section | ID | Description |
+|---|---|---|
+| Hero | `#banner` | Looping background video, animated title, 4 live KPI metrics |
+| Data Strip | — | Scrolling ticker with real-time system status indicators |
+| Solution | `#solution` | Problem statement, live alert simulation, mission & vision cards |
+| Profiles | `#profiles` | Three stakeholder cards: Management, Fleet Supervision, Light Vehicle Drivers |
+| Edge Technology | `#edge` | Edge Computing, V2X Protocol, Digital Safety Mesh — sticky scroll panels |
+| How It Works | `#how-it-works` | 4-step process: Signal Detection → Edge Processing → Multi-Layer Alert → Resolution |
+| Product | `#about-the-product` | Lazy-loaded product demo video in chrome frame |
+| Pricing | `#subscription` | Enterprise Full Safety Suite plan card |
+| Team | `#about-the-team` | 7-member team grid + lazy-loaded team presentation video |
+| FAQ | `#faq` | 4 native `<details>`/`<summary>` accordions with exclusive-open logic |
+| Footer | — | Brand, platform links, company links, contact info |
+
+---
 
 ## Project Structure
-The repository is organized as a flat static site:
 
-- `index.html`
-- `terms.html`
-- `style.css`
-- `main.js`
-- `i18n/`
-  - `en.json`
-  - `es.json`
-- `assets/`
-  - images, logos, and the hero background video
-
-This structure keeps content, styling, scripting, translations, and media clearly separated.
-
-## Technologies
-- HTML5
-- CSS3 (custom properties, grid, flexbox, clip-path)
-- JavaScript (ES6, `fetch`)
-- Google Fonts (`Bebas Neue`, `Barlow`, `Barlow Condensed`)
-- JSON-based i18n resources
-
-## Documentation
-### Sections
-The landing page sections and their content keys are defined in:
-- [`i18n/en.json`](i18n/en.json)
-- [`i18n/es.json`](i18n/es.json)
-
-### Legal
-The Terms and Conditions page is available in [`terms.html`](terms.html).
-
-## Prerequisites
-Before running the project, make sure the environment includes:
-- A modern web browser
-- Optionally, Node.js or any static HTTP server to serve the files locally
-
-## Installation
-No installation step is required. The project is composed of static files and can be opened directly in a browser.
-
-## Running the Application
-### Option 1: Open directly
-Open `index.html` in any modern web browser.
-
-### Option 2: Use a local static server
-From the project root, run any static server, for example:
-
-```bash
-npx serve .
+```
+mineguard-website/
+├── index.html          # Main landing page
+├── terms.html          # Terms & Conditions
+├── style.css           # Design system + all component styles
+├── main.js             # Runtime: GSAP, i18n, theme, facade, FAQ, counters
+├── i18n/
+│   ├── en.json         # English strings (13 sections)
+│   └── es.json         # Spanish strings (13 sections)
+└── assets/
+    ├── truck.mp4       # Hero background video
+    ├── mineguard3.png  # Logo & favicon
+    └── img/team/       # Team member photos
 ```
 
-Or with Python:
+---
+
+## Technology Stack
+
+| Technology | Version / Notes |
+|---|---|
+| HTML5 | Semantic markup, `<details>/<summary>` accordions |
+| CSS3 | Custom properties (design tokens), grid, flexbox, `clip-path`, `aspect-ratio`, animations |
+| JavaScript | Vanilla ES6+, no framework |
+| GSAP | 3.12.2 — scroll-triggered fade-up animations |
+| ScrollTrigger | GSAP plugin — `.fade-up` elements animate on viewport entry |
+| Google Fonts | Bebas Neue, Barlow, Barlow Condensed |
+
+---
+
+## Key Features
+
+### Dark / Light Theme
+- Toggle button in the nav bar (sun/moon icon)
+- Theme stored in `localStorage` key `mg-theme`
+- CSS custom properties (`--bg`, `--white`, `--yellow`, etc.) swap via `[data-theme="light"]`
+- **Nav always stays dark** regardless of theme, preserving logo visibility
+- WCAG contrast fix: yellow `#FCB502` replaced by dark amber `#9B5000` for text on light backgrounds
+
+### Internationalization (EN / ES)
+- Language toggle in the nav bar, persisted to `localStorage` key `mg-lang`
+- Every translatable element carries `data-section` and `data-value` attributes
+- **Pattern — "HTML as English default"**: the hardcoded text in `index.html` and `terms.html` is the English content. No fetch occurs for English on first load. When the user switches to ES, `es.json` is fetched and `innerHTML` is replaced for all `[data-section][data-value]` elements. Switching back to EN fetches `en.json` to restore without a page reload
+- To add a translatable string: add `data-section`/`data-value` to the HTML element and add the matching key to both `i18n/en.json` and `i18n/es.json`
+
+**i18n sections in both JSON files:**
+
+```
+nav · banner · strip · solution · profiles · edge
+how-it-works · product · subscription · team · faq · footer · terms
+```
+
+### Video Facade (Lazy Load)
+Both the product demo and team presentation videos use the **Facade pattern**:
+- On load: a YouTube thumbnail image is shown with a yellow `#FCB502` play button and a pulsing ring animation
+- On click: the thumbnail is replaced with an autoplay `<iframe>` — no YouTube resources are fetched until the user explicitly plays the video
+- Reduces initial page weight and avoids unwanted autoplay
+
+### GSAP Scroll Animations
+- All `.fade-up` elements start at `opacity: 0; translateY(48px)`
+- GSAP + ScrollTrigger animates them to visible as they enter the viewport (trigger at `top 88%`)
+
+### Dashboard Alert Feed
+- Live rotating alert feed in the Solution section
+- Cycles through 8 alert types (critical, warning, info, resolved) every 3.8 s with smooth fade/slide transitions
+
+### Live Metrics Counter
+- KPI numbers in the pricing and profile cards animate from 0 to their target value on first viewport intersection
+- Ease-out cubic easing over 1.8 s
+
+---
+
+## Running Locally
+
+Open `index.html` directly in a browser, or use a static server so that `fetch` calls for i18n JSON files work correctly:
 
 ```bash
+# Node.js
+npx serve .
+
+# Python
 python -m http.server 8080
 ```
 
-This serves the application at:
+Then open `http://localhost:8080`.
 
-- `http://localhost:8080/`
+> **Note:** Opening `index.html` via `file://` protocol will block the `fetch` calls for translation files in most browsers. A local HTTP server is recommended for full i18n functionality.
 
-A static server is recommended so that the `fetch` calls used by the language switcher can load the i18n JSON files correctly.
+---
 
-## Development Workflow
-For local development, edit the HTML, CSS, JavaScript, or i18n files and refresh the browser. There is no build step.
+## Design Tokens (CSS Custom Properties)
 
-## Internationalization Notes
-- Translation files are located in `i18n/`.
-- The language switcher in `main.js` reads `data-section` and `data-value` attributes on each translatable element and replaces `innerHTML` with the matching entry from the selected locale.
-- To add a new translatable string, add the element to the HTML with `data-section` and `data-value`, and add the corresponding key to both `i18n/en.json` and `i18n/es.json`.
+| Token | Dark value | Light value |
+|---|---|---|
+| `--bg` | `#141414` | `#F4F5F7` |
+| `--yellow` | `#FCB502` | `#FCB502` |
+| `--blue` | `#2578F4` | `#2578F4` |
+| `--white` | `#F4F4F5` | `#1C1C2E` |
+| `--text` | `#C8D8E8` | `#344054` |
+| `--muted` | `#6B7280` | `#667085` |
 
-## Project Notes
-- The hero background video is located in `assets/truck.mp4`.
-- The favicon and logo image is `assets/JtLogoMG.jpeg`.
-- Footer legal links (Terms of Service, Cookies Policy, Privacy Policy) point to `terms.html`.
-- The product brand is MineGuard; the company brand is Vertex.
+---
+
+## Legal
+
+Terms & Conditions are available at [`terms.html`](terms.html). Footer legal links point to this page.
+
+Product brand: **MineGuard** — Company brand: **Vertex**
