@@ -1,407 +1,1098 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
-        <title>Vertex </title>
-        <link rel="icon" href="assets/JtLogoMG.jpeg">
-        </head>
-    <body>
-              <!-- NAV -->
-        <nav>
-            <div class="nav-logo">
-            <div class="logo-mark">
-                <img src="assets/JtLogoMG.jpeg" alt="logo-vertex">
-            </div>
-            <span class="logo-text">MINE<span>GUARD</span></span>
-            </div>
-            <div class="language-toggle">
-            <button data-language="en" class="lang-btn active">EN</button>
-            <button data-language="es" class="lang-btn">ES</button>
-            </div>
-            <ul class="nav-links">
-            <li><a href="#solution"        data-section="nav" data-value="solution">SOLUTION</a></li>
-            <li><a href="#how-it-works"    data-section="nav" data-value="how-works">HOW IT WORKS?</a></li>
-            <li><a href="#about-the-team"  data-section="nav" data-value="team">ABOUT THE TEAM</a></li>
-            <li><a href="#about-the-product" data-section="nav" data-value="product">ABOUT THE PRODUCT</a></li>
-            <li><a href="#subscription"    data-section="nav" data-value="pricing">Pricing</a></li>
-            </ul>
-            <button class="nav-cta" data-section="nav" data-value="signin"><a href="https://mineguard-iot.netlify.app/iam/sign-in">SIGN IN</a></button>
-        </nav>
-        </header>
 
-        <section id="banner">
-        <div class="txt-container">
-            <h1 class="hero-title">
-            <span class="accent2" data-section="banner" data-value="title-line1">DIGITAL</span>
-            <span class="accent"  data-section="banner" data-value="title-line2">SAFETY</span><br>
-            <span                 data-section="banner" data-value="title-line3">MESH</span><br>
-            </h1>
-            <p class="hero-subtitle" data-section="banner" data-value="subtitle">Real-time collision prevention</p>
-            <button type="submit" class="subscribe-button" data-section="banner" data-value="cta">
-            Subscribe Now
-            </button>
-        </div>
-        <div class="svg-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="197" height="389" viewBox="0 0 197 389" fill="none">
-            <path d="M166.196 0.0867082C167.29 21.6105 168.384 43.1343 175.254 64.6408C182.124 86.1472 194.769 107.636 195.392 129.162C196.014 150.687 184.613 172.248 182.29 193.782C179.967 215.316 186.721 236.823 186.916 258.35C187.112 279.876 180.753 301.422 173.815 322.97C166.877 344.518 159.364 366.068 151.85 387.618L1.16558 388.071C1.10083 366.544 1.03608 345.017 0.971325 323.49C0.906574 301.963 0.841824 280.436 0.777073 258.91C0.712323 237.383 0.647572 215.856 0.582821 194.329C0.518071 172.802 0.45332 151.275 0.38857 129.748C0.323819 108.221 0.259068 86.6942 0.194318 65.1673C0.129567 43.6404 0.0648167 22.1135 6.61149e-05 0.586607L166.196 0.0867082Z" fill="#050810" fill-opacity="0.19"/>
-            <path d="M181.707 0.0400586C180.683 21.5702 179.659 43.1004 170.822 64.6541C161.985 86.2078 145.335 107.785 137.777 129.335C130.219 150.885 131.752 172.407 135.755 193.922C139.759 215.437 146.235 236.945 158.109 258.436C169.983 279.928 187.253 301.403 184.895 322.937C182.536 344.471 160.544 366.064 138.554 387.658L1.16558 388.071C1.10082 366.544 1.03607 345.017 0.971324 323.49C0.906573 301.963 0.841822 280.436 0.777072 258.91C0.712321 237.383 0.647571 215.856 0.58282 194.329C0.51807 172.802 0.453319 151.275 0.388568 129.748C0.323818 108.221 0.259067 86.6943 0.194317 65.1673C0.129566 43.6404 0.0648155 22.1135 6.49248e-05 0.586614L181.707 0.0400586Z" fill="#050810" fill-opacity="0.19"/>
-            <path d="M128.525 0.200024C137.339 21.7006 146.153 43.2012 153.094 64.7074C160.036 86.2137 165.107 107.726 162.152 129.261C159.198 150.797 148.224 172.358 137.971 193.916C127.719 215.473 118.193 237.029 120.438 258.55C122.683 280.07 136.703 301.555 142.792 323.064C148.88 344.572 147.041 366.105 145.202 387.638L1.16558 388.071C1.10083 366.544 1.03608 345.017 0.971327 323.49C0.906576 301.963 0.841826 280.436 0.777075 258.91C0.712325 237.383 0.647574 215.856 0.582823 194.329C0.518073 172.802 0.453322 151.275 0.388572 129.748C0.323821 108.221 0.25907 86.6942 0.19432 65.1673C0.129569 43.6404 0.0648187 22.1135 6.81491e-05 0.586612L128.525 0.200024Z" fill="#050810" fill-opacity="0.19"/>
-            <path d="M113.013 0.246675C119.916 21.753 126.822 43.2593 128.719 64.7807C130.616 86.3021 127.509 107.839 133.345 129.348C139.181 150.858 153.959 172.34 149.051 193.882C144.143 215.424 119.546 237.025 116.006 258.563C112.466 280.101 129.984 301.575 138.36 323.077C146.736 344.579 145.969 366.108 145.202 387.638L1.16558 388.071C1.10083 366.544 1.03608 345.017 0.971327 323.49C0.906576 301.963 0.841825 280.436 0.777075 258.91C0.712324 237.383 0.647574 215.856 0.582823 194.329C0.518073 172.802 0.453322 151.275 0.388571 129.748C0.323821 108.221 0.25907 86.6942 0.19432 65.1673C0.129569 43.6404 0.0648185 22.1135 6.7889e-05 0.586606L113.013 0.246675Z" fill="#050810" />
-            <path d="M119.661 0.22668C106.208 21.7942 92.7536 43.3618 95.4798 64.8807C98.2061 86.3996 117.111 107.87 120.049 129.388C122.988 150.906 109.962 172.473 111.38 193.996C112.798 215.518 128.665 236.998 127.086 258.53C125.506 280.061 106.485 301.646 105.121 323.177C103.756 344.708 120.047 366.186 136.338 387.664L1.16553 388.071C1.10078 366.544 1.03603 345.017 0.97128 323.49C0.906529 301.963 0.841778 280.436 0.777028 258.91C0.712277 237.383 0.647527 215.856 0.582776 194.329C0.518026 172.802 0.453275 151.275 0.388524 129.748C0.323774 108.221 0.259023 86.6942 0.194273 65.1673C0.129522 43.6404 0.0647714 22.1135 2.08675e-05 0.586607L119.661 0.22668Z" fill="#050810" fill-opacity="0.19"/>
-            <path d="M104.149 0.273338C116.959 21.7619 129.769 43.2505 130.935 64.7741C132.101 86.2977 121.619 107.856 111.186 129.415C100.752 150.973 90.3615 172.532 93.6524 194.049C96.9434 215.566 113.911 237.042 113.79 258.57C113.669 280.097 96.4542 301.676 94.041 323.21C91.6277 344.745 104.011 366.235 116.395 387.724L1.16558 388.071C1.10083 366.544 1.03608 345.017 0.971331 323.49C0.906581 301.963 0.84183 280.436 0.77708 258.91C0.712329 237.383 0.647578 215.856 0.582828 194.329C0.518077 172.802 0.453327 151.275 0.388576 129.748C0.323826 108.221 0.259075 86.6942 0.194324 65.1673C0.129574 43.6404 0.0648232 22.1135 7.26077e-05 0.586607L104.149 0.273338Z" fill="#050810" fill-opacity="0.19"/>
-            <path d="M99.7175 0.286674C104.543 21.7993 109.368 43.3119 106.56 64.8474C103.751 86.383 93.3101 107.941 95.6741 129.461C98.0382 150.981 113.212 172.463 111.38 193.996C109.548 215.528 90.7154 237.112 80.551 258.67C70.3867 280.227 68.8955 301.759 71.8815 323.277C74.8675 344.795 82.3354 366.3 89.8033 387.804L1.1656 388.071C1.10085 366.544 1.0361 345.017 0.971347 323.49C0.906596 301.963 0.841846 280.436 0.777095 258.91C0.712345 237.383 0.647594 215.856 0.582843 194.329C0.518093 172.802 0.453342 151.275 0.388592 129.748C0.323841 108.221 0.259091 86.6942 0.19434 65.1673C0.129589 43.6404 0.0648388 22.1135 8.82065e-05 0.586613L99.7175 0.286674Z" fill="#050810" fill-opacity="0.19"/>
-            <path d="M104.149 0.273338C100.135 21.8125 96.1204 43.3517 86.6161 64.9074C77.1118 86.4631 62.1201 108.035 66.8669 129.548C71.6137 151.061 96.0991 172.514 98.0843 194.036C100.07 215.557 79.5547 237.145 69.4713 258.703C59.388 280.26 59.7363 301.786 60.8018 323.31C61.8673 344.834 63.6476 366.356 65.428 387.878L1.16559 388.071C1.10084 366.544 1.03609 345.017 0.971341 323.49C0.90659 301.963 0.84184 280.436 0.777089 258.91C0.712338 237.383 0.647588 215.856 0.582837 194.329C0.518087 172.802 0.453336 151.275 0.388586 129.748C0.323835 108.221 0.259084 86.6942 0.194334 65.1673C0.129583 43.6404 0.0648326 22.1135 8.20413e-05 0.586608L104.149 0.273338Z" fill="#050810" fill-opacity="0.19"/>
-            <path d="M39.887 0.466633C37.0901 22.0021 34.2955 43.5377 40.0812 65.0474C45.8669 86.5571 60.2376 108.041 62.4349 129.561C64.6322 151.082 54.6609 172.639 53.7654 194.169C52.8699 215.699 61.0503 237.201 67.2553 258.71C73.4604 280.218 77.6854 301.732 74.0974 323.27C70.5094 344.808 59.1037 366.37 47.7003 387.931L1.16553 388.071C1.10078 366.544 1.03602 345.017 0.971274 323.49C0.906524 301.963 0.841773 280.436 0.777023 258.91C0.712272 237.383 0.647521 215.856 0.582771 194.329C0.51802 172.802 0.45327 151.275 0.388519 129.748C0.323769 108.221 0.259018 86.6942 0.194267 65.1673C0.129517 43.6404 0.0647662 22.1135 1.5603e-05 0.586609L39.887 0.466633Z" fill="#050810" fill-opacity="0.19"/>
-            <path d="M68.6943 0.37999C66.8791 21.9126 65.0663 43.4451 60.0248 64.9874C54.9834 86.5296 46.7157 108.082 42.4915 129.621C38.2673 151.161 38.0914 172.689 36.0379 194.222C33.9844 215.755 30.0581 237.294 27.3684 258.83C24.6787 280.365 23.228 301.896 29.7786 323.404C36.3292 344.911 50.8786 366.394 65.428 387.878L1.1656 388.071C1.10085 366.544 1.0361 345.017 0.971349 323.49C0.906598 301.963 0.841847 280.436 0.777097 258.91C0.712346 237.383 0.647596 215.856 0.582845 194.329C0.518095 172.802 0.453344 151.275 0.388593 129.748C0.323843 108.221 0.259092 86.6943 0.194342 65.1673C0.129591 43.6404 0.0648404 22.1135 8.98664e-05 0.586614L68.6943 0.37999Z" fill="#050810" fill-opacity="0.19"/>
-            </svg>
-        </div>
-        <div class="video-container">
-            <video autoplay muted loop>
-            <source src="assets/truck.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video>
-        </div>
-        </section>
-              <section id="solution">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineGuard — Digital Safety Mesh</title>
+  <link rel="icon" href="assets/mineguard3.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-                  <div class="section-tag" data-section="solution" data-value="tag">Solution</div>
-                  <h2 class="section-title" data-section="solution" data-value="heading">WHY <span class="accent">CHOOSE US</span>?</h2>
+<body>
 
-                  <div class="problem-grid">
-                      <div class="problem-visual fade-up">
-                          <div class="warning-box">
-                              <div class="warning-icon">⚠️</div>
-                              <div class="warning-title" data-section="solution" data-value="warning1-title">Imminent Collision</div>
-                              <div class="warning-text"  data-section="solution" data-value="warning1-text">Light vehicle detected in autonomous truck route — North Sector</div>
-                          </div>
-                          <div class="warning-box">
-                              <div class="warning-icon">🚧</div>
-                              <div class="warning-title" data-section="solution" data-value="warning2-title">Restricted Zone</div>
-                              <div class="warning-text"  data-section="solution" data-value="warning2-text">Unauthorized entry detected in active autonomous traffic corridor</div>
-                          </div>
-                          <div class="warning-box">
-                              <div class="warning-icon">📡</div>
-                              <div class="warning-title" data-section="solution" data-value="warning3-title">Alert Generated</div>
-                              <div class="warning-text"  data-section="solution" data-value="warning3-text">Notification sent to driver and control center in 43ms</div>
-                          </div>
-                      </div>
-
-                      <div class="problem-content fade-up">
-                          <p data-section="solution" data-value="body1">In modern open-pit mining operations, high-tonnage autonomous vehicles operate on defined routes with speeds and loads that make a conventional emergency stop impossible. When a passenger-operated light vehicle invades these routes, the risk of collision is immediate and potentially fatal.</p>
-                          <p data-section="solution" data-value="body2">Our proposal is primarily aimed at open-pit mining companies that operate autonomous fleets, as well as drivers of light vehicles who interact with these routes. For companies, Vertex represents a solution that reduces accidents, prevents economic losses due to downtime, and strengthens compliance with safety standards. For drivers, it provides an intuitive tool that improves their awareness of their surroundings without causing distractions.</p>
-                      </div>
-                  </div>
-
-                  <div class="mv-grid">
-                      <div class="mv-card mission fade-up">
-                          <div class="img-container">
-                              <img src="assets/mission.jpeg" alt="mission">
-                          </div>
-                          <div class="mv-content">
-                              <div class="mv-label" data-section="solution" data-value="mission-label">Mission</div>
-                              <p class="mv-text"  data-section="solution" data-value="mission-text">Provide IoT-based technological solutions that enable the prevention of accidents in mining environments through real-time monitoring and early warning systems, protecting the lives of workers and optimizing operational safety.</p>
-                              <div class="mv-icon">⛏</div>
-                          </div>
-                      </div>
-                      <div class="mv-card vision fade-up">
-                          <div class="img-container">
-                              <img src="assets/vision.jpeg" alt="vision">
-                          </div>
-                          <div class="mv-content">
-                              <div class="mv-label" data-section="solution" data-value="vision-label">Vision</div>
-                              <p class="mv-text"  data-section="solution" data-value="vision-text">Become the leading smart security solution for autonomous mining operations globally, driving the digital transformation of the sector towards safer, more efficient and reliable environments.</p>
-                              <div class="mv-icon">🌐</div>
-                          </div>
-                      </div>
-                  </div>
-
-              </section>
-              <section id="how-it-works">
-                <div class="section-tag" data-section="how-it-works" data-value="tag">How it works</div>
-
-                <div class="txt-container">
-                    <p data-section="how-it-works" data-value="body1">Vertex emerges as a technology startup focused on preventing collisions in mining environments through the implementation of a Digital Safety Mesh, designed to detect dangerous incursions into autonomous transport routes and generate real-time alerts.</p>
-                    <p><br><span data-section="how-it-works" data-value="body2">We help 2 sectors in the mining industry:</span></p>
-                </div>
-
-                <div class="targets-grid">
-                    <div class="target-card mining fade-up">
-                    <div class="target-number" data-section="how-it-works" data-value="card1-number">01</div>
-                    <div class="target-icon">⛏️</div>
-                    <div class="target-title" data-section="how-it-works" data-value="card1-title">Open-Pit Mining Companies</div>
-                    <p class="target-desc"    data-section="how-it-works" data-value="card1-desc">Autonomous fleet operators seeking to reduce accidents, avoid operational downtime, and strengthen their safety standards.</p>
-                    <ul class="target-benefits">
-                        <li data-section="how-it-works" data-value="card1-benefit1">Reduction in accidents and associated costs</li>
-                        <li data-section="how-it-works" data-value="card1-benefit2">Guaranteed operational continuity</li>
-                        <li data-section="how-it-works" data-value="card1-benefit3">Compliance with international safety standards</li>
-                        <li data-section="how-it-works" data-value="card1-benefit4">Total visibility of the operating environment</li>
-                        <li data-section="how-it-works" data-value="card1-benefit5">Positive ROI from the first month</li>
-                    </ul>
-                    </div>
-
-                    <div class="target-card drivers fade-up">
-                    <div class="target-number" data-section="how-it-works" data-value="card2-number">02</div>
-                    <div class="target-icon">🚗</div>
-                    <div class="target-title" data-section="how-it-works" data-value="card2-title">Light Vehicle Drivers</div>
-                    <p class="target-desc"    data-section="how-it-works" data-value="card2-desc">Personnel operating in shared zones with autonomous machinery who require real-time information without additional distractions.</p>
-                    <ul class="target-benefits">
-                        <li data-section="how-it-works" data-value="card2-benefit1">Intuitive and non-intrusive alerts</li>
-                        <li data-section="how-it-works" data-value="card2-benefit2">Improved situational awareness of the environment</li>
-                        <li data-section="how-it-works" data-value="card2-benefit3">Reduced stress in high-risk zones</li>
-                        <li data-section="how-it-works" data-value="card2-benefit4">Active protection throughout the entire shift</li>
-                        <li data-section="how-it-works" data-value="card2-benefit5">Simple interface with zero learning curve</li>
-                    </ul>
-                    </div>
-                </div>         
-                </section>
-
-        <section id="about-the-team">
-            <div class="section-tag" data-section="team" data-value="tag">About the team</div>
-            <div class="hero-bg">
-                <div class="radar">
-                    <div class="radar-circle"></div>
-                    <div class="radar-circle"></div>
-                    <div class="radar-circle"></div>
-                    <div class="radar-circle"></div>
-                    <div class="radar-circle"></div>
-                    <div class="radar-sweep"></div>
-                    <div class="radar-dot"></div>
-                    <div class="radar-dot"></div>
-                    <div class="radar-dot"></div>
-                </div>
-            </div>
-            <div class="txt-container">
-                <h1 data-section="team" data-value="heading">Meet the team behind Vertex</h1>
-                <p  data-section="team" data-value="subheading">A multidisciplinary team dedicated to transforming the mining industry through smart solutions.</p>
-            </div>
-            <div class="team-container">
-              <div class="team-card">
-                <img src="assets/img/team/foto-gabriel.png" alt="Gabriel">
-                <h3>Gabriel Fernando Gordon Salas</h3>
-                <p>U20221E229</p>
-                <span data-section="team" data-value="career">(SOFTWARE ENGINEERING)</span>
-              </div>
-
-              <div class="team-card">
-                <img src="assets/img/team/FotoMelgarejo.png" alt="Marcia">
-                <h3>Marcia Victoria Melgarejo Gomez</h3>
-                <p>U20231C505</p>
-                <span data-section="team" data-value="career">(SOFTWARE ENGINEERING)</span>
-              </div>
-
-              <div class="team-card">
-                <img src="assets/img/team/fotoAlaya.JPG" alt="Rodrigo">
-                <h3>Rodrigo Alaya Cabrera</h3>
-                <p>U202219481</p>
-                <span data-section="team" data-value="career">(SOFTWARE ENGINEERING)</span>
-              </div>
-
-              <div class="team-card">
-                <img src="assets/img/team/foto_guevara.png" alt="Jorge">
-                <h3>Jorge Enrique Guevara Tejada</h3>
-                <p>U202316057</p>
-                <span data-section="team" data-value="career">(SOFTWARE ENGINEERING)</span>
-              </div>
-
-              <div class="team-card">
-                <img src="assets/img/team/FotoRomero.png" alt="Russell">
-                <h3>Russell Stephen Romero Qwistgaard</h3>
-                <p>U202211043</p>
-                <span data-section="team" data-value="career">(SOFTWARE ENGINEERING)</span>
-              </div>
-
-              <div class="team-card">
-                <img src="assets/img/team/renato_zegarra.png" alt="Renato">
-                <h3>Renato Sebastian Ruber Zegarra Lopez</h3>
-                <p>U202311558</p>
-                <span data-section="team" data-value="career">(SOFTWARE ENGINEERING)</span>
-              </div>
-
-              <div class="team-card">
-                <img src="assets/img/team/fotoGonzales.jpeg" alt="Javier">
-                <h3>Javier Sebastian Gonzales Alvarado</h3>
-                <p>u202312966</p>
-                <span data-section="team" data-value="career">(SOFTWARE ENGINEERING)</span>
-              </div>
-
-            </div>
-        </section>
-
-        <section id="about-the-product">
-            <div class="section-tag" data-section="product" data-value="tag">About the product</div>
-            <div class="video-container">
-                <div class="video-placeholder">
-                    <p data-section="product" data-value="placeholder">COMING SOON...</p>
-                </div>
-            </div>
-        </section>
-<section id="faq">
-      <div class="section-tag" data-section="faq" data-value="tag">Frequently Asked Questions</div>
-      <div class="faq-container">
-        <details class="faq-item" open>
-          <summary class="faq-question">
-            <span data-section="faq" data-value="q1">How does MineGuard integrate with existing autonomous fleets?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p data-section="faq" data-value="a1">MineGuard uses industry-standard communication protocols (V2X) to connect with Fleet Management Systems (FMS). It is installed non-intrusively and acts as an additional safety layer that visualizes real-time data.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            <span data-section="faq" data-value="q2">What is the precision level of the positioning system?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p data-section="faq" data-value="a2">We utilize high-precision GNSS technology with RTK corrections, allowing for centimeter-level accuracy. This is crucial for safe interaction between light vehicles and mining giants.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            <span data-section="faq" data-value="q3">Does it work in areas without conventional internet coverage?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p data-section="faq" data-value="a3">Yes. MineGuard is designed to operate on private LTE/5G mining networks and can work in local mode (Mesh Network) to ensure that critical proximity alerts are issued even without a central server connection.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-question">
-            <span data-section="faq" data-value="q4">What is the implementation timeframe for the system?</span>
-            <span class="faq-icon">+</span>
-          </summary>
-          <div class="faq-answer">
-            <p data-section="faq" data-value="a4">A standard implementation for a fleet of 20 light vehicles takes approximately 2 weeks, including digital environment calibration and personnel training.</p>
-          </div>
-        </details>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <div class="logo-mark">
+        <img src="assets/mineguard3.png" alt="MineGuard">
       </div>
-    </section>
+      <span class="logo-text">MINE<span class="logo-accent">GUARD</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#solution" data-section="nav" data-value="solution">Solution</a></li>
+      <li><a href="#profiles" data-section="nav" data-value="profiles">Who It's For</a></li>
+      <li><a href="#how-it-works" data-section="nav" data-value="how-works">Technology</a></li>
+      <li><a href="#about-the-team" data-section="nav" data-value="team">Team</a></li>
+      <li><a href="#subscription" data-section="nav" data-value="pricing">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="language-toggle">
+        <button data-language="en" class="lang-btn active">EN</button>
+        <button data-language="es" class="lang-btn">ES</button>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+      </button>
+      <a href="https://mineguard-iot.netlify.app/iam/sign-in" class="nav-cta" data-section="nav"
+        data-value="signin">Sign In</a>
+    </div>
+  </nav>
 
-        <section id="subscription">
-      <div class="section-tag" data-section="subscription" data-value="tag">Subscription</div>
-      
-      <div>
-        <div class="mesh-visual fade-up">
-          <div class="alert-badge" data-section="subscription" data-value="alert">
-            ● Alert active
-          </div>
-          <div class="mesh-container">
-            <svg class="mesh-svg" viewBox="0 0 400 400">
-              <line x1="50" y1="50" x2="200" y2="80" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
-              <line x1="200" y1="80" x2="350" y2="50" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
-              <line x1="50" y1="50" x2="80" y2="200" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
-              <line x1="80" y1="200" x2="200" y2="200" stroke="rgba(0,212,255,0.5)" stroke-width="1.5"/>
-              <line x1="200" y1="200" x2="320" y2="200" stroke="rgba(0,212,255,0.5)" stroke-width="1.5"/>
-              <line x1="320" y1="200" x2="350" y2="50" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
-              <line x1="200" y1="80" x2="200" y2="200" stroke="rgba(0,212,255,0.4)" stroke-width="1"/>
-              <line x1="80" y1="200" x2="120" y2="340" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
-              <line x1="120" y1="340" x2="200" y2="320" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
-              <line x1="200" y1="320" x2="280" y2="340" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
-              <line x1="280" y1="340" x2="320" y2="200" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
-              <line x1="200" y1="200" x2="200" y2="320" stroke="rgba(0,212,255,0.4)" stroke-width="1"/>
-              <polygon points="200,80 350,50 320,200 200,200" fill="rgba(0,212,255,0.05)" stroke="rgba(0,212,255,0.2)" stroke-width="1"/>
-              <polygon points="80,200 200,200 120,340" fill="rgba(255,107,0,0.08)" stroke="rgba(255,107,0,0.4)" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <!-- HERO -->
+  <section id="banner">
+    <div class="hero-overlay"></div>
+    <div class="video-bg">
+      <video autoplay muted loop playsinline>
+        <source src="assets/truck.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span data-section="banner" data-value="badge">System Online &mdash; Active</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="ht-line1" data-section="banner" data-value="title-line1">DIGITAL</span>
+        <span class="ht-line2" data-section="banner" data-value="title-line2">SAFETY</span>
+        <span class="ht-line3" data-section="banner" data-value="title-line3">MESH</span>
+      </h1>
+      <p class="hero-subtitle" data-section="banner" data-value="subtitle">Real-time collision prevention for autonomous
+        mining fleets</p>
+      <div class="hero-actions">
+        <a href="#subscription" class="btn-primary" data-section="banner" data-value="cta">Request a Demo</a>
+        <a href="#solution" class="btn-ghost" data-section="banner" data-value="ghost-cta">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-metrics">
+      <div class="hero-metric">
+        <span class="hm-value">43<span class="hm-unit">ms</span></span>
+        <span class="hm-label" data-section="banner" data-value="metric1">Alert Latency</span>
+      </div>
+      <div class="hm-divider"></div>
+      <div class="hero-metric">
+        <span class="hm-value">99.7<span class="hm-unit">%</span></span>
+        <span class="hm-label" data-section="banner" data-value="metric2">Detection Rate</span>
+      </div>
+      <div class="hm-divider"></div>
+      <div class="hero-metric">
+        <span class="hm-value">&#177;2<span class="hm-unit">cm</span></span>
+        <span class="hm-label" data-section="banner" data-value="metric3">GNSS Precision</span>
+      </div>
+      <div class="hm-divider"></div>
+      <div class="hero-metric">
+        <span class="hm-value">0</span>
+        <span class="hm-label" data-section="banner" data-value="metric4">Incidents YTD</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE DATA STRIP -->
+  <div class="data-strip">
+    <div class="data-strip-inner">
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#22C55E" />
+        </svg>
+        <span data-section="strip" data-value="item1">System Nominal</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#2578F4" />
+        </svg>
+        <span data-section="strip" data-value="item2">V2X Protocol Active</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#FCB502" />
+        </svg>
+        <span data-section="strip" data-value="item3">Response Time: 43ms</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#22C55E" />
+        </svg>
+        <span data-section="strip" data-value="item4">GNSS Accuracy: &#177;2cm RTK</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#2578F4" />
+        </svg>
+        <span data-section="strip" data-value="item5">Mesh Network: 7 Nodes Connected</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#FCB502" />
+        </svg>
+        <span data-section="strip" data-value="item6">ISO 21448 Certified</span>
+      </div>
+
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#22C55E" />
+        </svg>
+        <span data-section="strip" data-value="item1">System Nominal</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#2578F4" />
+        </svg>
+        <span data-section="strip" data-value="item2">V2X Protocol Active</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#FCB502" />
+        </svg>
+        <span data-section="strip" data-value="item3">Response Time: 43ms</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#22C55E" />
+        </svg>
+        <span data-section="strip" data-value="item4">GNSS Accuracy: &#177;2cm RTK</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#2578F4" />
+        </svg>
+        <span data-section="strip" data-value="item5">Mesh Network: 7 Nodes Connected</span>
+      </div>
+      <div class="strip-sep"></div>
+      <div class="strip-item">
+        <svg width="8" height="8" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="4" fill="#FCB502" />
+        </svg>
+        <span data-section="strip" data-value="item6">ISO 21448 Certified</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOLUTION -->
+  <section id="solution">
+    <div class="section-header">
+      <div class="section-tag" data-section="solution" data-value="tag">Solution</div>
+      <h2 class="section-title" data-section="solution" data-value="heading">WHY <span class="accent-yellow">CHOOSE
+          US</span>?</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-visual fade-up">
+        <div class="alert-card alert-danger">
+          <div class="alert-icon-box danger">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BA1A1A" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+              <line x1="12" y1="9" x2="12" y2="13" />
+              <line x1="12" y1="17" x2="12.01" y2="17" />
             </svg>
-            <div class="mesh-node" style="top:46px;left:46px"></div>
-            <div class="mesh-node" style="top:75px;left:196px"></div>
-            <div class="mesh-node" style="top:46px;left:346px"></div>
-            <div class="mesh-node" style="top:196px;left:76px"></div>
-            <div class="mesh-node" style="top:196px;left:196px;background:var(--accent2);box-shadow:0 0 20px var(--accent2)"></div>
-            <div class="mesh-node" style="top:196px;left:316px"></div>
-            <div class="mesh-node" style="top:336px;left:116px"></div>
-            <div class="mesh-node" style="top:316px;left:196px"></div>
-            <div class="mesh-node" style="top:336px;left:276px"></div>
+          </div>
+          <div class="alert-info">
+            <div class="alert-label" data-section="solution" data-value="label1">CRITICAL</div>
+            <div class="alert-title" data-section="solution" data-value="warning1-title">Imminent Collision</div>
+            <div class="alert-desc" data-section="solution" data-value="warning1-text">Light vehicle detected in
+              autonomous truck route — North Sector</div>
+          </div>
+        </div>
+        <div class="alert-card alert-warning">
+          <div class="alert-icon-box warning">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg>
+          </div>
+          <div class="alert-info">
+            <div class="alert-label" data-section="solution" data-value="label2">WARNING</div>
+            <div class="alert-title" data-section="solution" data-value="warning2-title">Restricted Zone</div>
+            <div class="alert-desc" data-section="solution" data-value="warning2-text">Unauthorized entry detected in
+              active autonomous traffic corridor</div>
+          </div>
+        </div>
+        <div class="alert-card alert-info">
+          <div class="alert-icon-box info">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2578F4" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="2" />
+              <path
+                d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14" />
+            </svg>
+          </div>
+          <div class="alert-info">
+            <div class="alert-label" data-section="solution" data-value="label3">RESOLVED</div>
+            <div class="alert-title" data-section="solution" data-value="warning3-title">Alert Generated</div>
+            <div class="alert-desc" data-section="solution" data-value="warning3-text">Notification sent to driver and
+              control center in 43ms</div>
           </div>
         </div>
       </div>
 
-      <div class="pricing-container">
-        <div class="pricing-card premium fade-up">
-          <div class="card-header">
-            <div class="plan-tag"  data-section="subscription" data-value="plan-tag">Enterprise</div>
-            <h3 class="plan-name" data-section="subscription" data-value="plan-name">Full Safety Suite</h3>
-            <div class="plan-price">
-              <span class="currency" data-section="subscription" data-value="currency">$</span>
-              <span class="amount"   data-section="subscription" data-value="amount">120</span>
-              <span class="period"   data-section="subscription" data-value="period">/per unit/mo</span>
+      <div class="problem-content fade-up">
+        <p class="problem-lead" data-section="solution" data-value="lead">In modern open-pit mining, high-tonnage
+          autonomous vehicles operate at speeds and loads
+          that make emergency stops physically impossible. Every second of delay is a potential fatality.</p>
+        <ul class="check-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="solution" data-value="check1">Non-intrusive integration with existing Fleet Management
+              Systems (FMS)</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="solution" data-value="check2">43ms alert latency via private LTE/5G or Mesh Network
+              fallback</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="solution" data-value="check3">GNSS RTK centimeter-level (&#177;2cm) positioning
+              accuracy</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="solution" data-value="check4">ISO 21448 and MSHA safety standard compliance out of the
+              box</span>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="solution" data-value="check5">Operational in deep pit zones with zero cloud
+              dependency</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 PROFILES SECTION -->
+  <section id="profiles">
+    <div class="section-header">
+      <div class="section-tag" data-section="profiles" data-value="tag">Who It's For</div>
+      <h2 class="section-title" data-section="profiles" data-value="heading">THREE <span
+          class="accent-blue">STAKEHOLDERS</span>, ONE SYSTEM</h2>
+      <p class="section-subtitle" data-section="profiles" data-value="subtitle">MineGuard is purpose-built to address
+        the specific needs of every critical role in
+        open-pit mining operations — from the boardroom to the cab.</p>
+    </div>
+    <div class="profiles-grid">
+
+      <div class="profile-card fade-up" data-color="yellow">
+        <div class="profile-num">01</div>
+        <div class="profile-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <h3 class="profile-title" data-section="profiles" data-value="p1-title">Management &amp; Operations</h3>
+        <p class="profile-focus" data-section="profiles" data-value="p1-focus">ROI protection &amp; regulatory
+          compliance</p>
+        <ul class="profile-bullets">
+          <li data-section="profiles" data-value="p1-b1">Elimination of downtime costs from collision incidents</li>
+          <li data-section="profiles" data-value="p1-b2">Measurable reduction in operational insurance premiums</li>
+          <li data-section="profiles" data-value="p1-b3">ISO 21448 &amp; MSHA compliance built in from day one</li>
+          <li data-section="profiles" data-value="p1-b4">Board-ready safety analytics and incident reports</li>
+          <li data-section="profiles" data-value="p1-b5">Positive ROI from the first month of deployment</li>
+        </ul>
+        <div class="profile-stat">
+          <span class="stat-num">-73<span class="stat-pct">%</span></span>
+          <span class="stat-desc" data-section="profiles" data-value="p1-stat">Incident-related operational
+            downtime</span>
+        </div>
+      </div>
+
+      <div class="profile-card fade-up" data-color="blue">
+        <div class="profile-num">02</div>
+        <div class="profile-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2578F4" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>
+        </div>
+        <h3 class="profile-title" data-section="profiles" data-value="p2-title">Fleet Supervision</h3>
+        <p class="profile-focus" data-section="profiles" data-value="p2-focus">Real-time control &amp; data-driven
+          decisions</p>
+        <ul class="profile-bullets">
+          <li data-section="profiles" data-value="p2-b1">Unified live dashboard: every vehicle in a single view</li>
+          <li data-section="profiles" data-value="p2-b2">Intelligent alert classification by criticality level</li>
+          <li data-section="profiles" data-value="p2-b3">Anti-fatigue driver biometric monitoring system</li>
+          <li data-section="profiles" data-value="p2-b4">Predictive risk analytics segmented by sector and shift</li>
+          <li data-section="profiles" data-value="p2-b5">Full GPS-correlated event log with exportable evidence</li>
+        </ul>
+        <div class="profile-stat">
+          <span class="stat-num">100<span class="stat-pct">%</span></span>
+          <span class="stat-desc" data-section="profiles" data-value="p2-stat">Fleet visibility in real time</span>
+        </div>
+      </div>
+
+      <div class="profile-card fade-up" data-color="green">
+        <div class="profile-num">03</div>
+        <div class="profile-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <h3 class="profile-title" data-section="profiles" data-value="p3-title">Light Vehicle Drivers</h3>
+        <p class="profile-focus" data-section="profiles" data-value="p3-focus">Personal safety &amp; zero distraction
+        </p>
+        <ul class="profile-bullets">
+          <li data-section="profiles" data-value="p3-b1">Your personal lifesaving co-pilot on every shift</li>
+          <li data-section="profiles" data-value="p3-b2">Non-intrusive visual and audio proximity alerts</li>
+          <li data-section="profiles" data-value="p3-b3">Biometric fatigue detection with automatic reporting</li>
+          <li data-section="profiles" data-value="p3-b4">One-touch panic button with immediate dispatch response</li>
+          <li data-section="profiles" data-value="p3-b5">Zero learning curve — operational from minute one</li>
+        </ul>
+        <div class="profile-stat">
+          <span class="stat-num">43<span class="stat-pct">ms</span></span>
+          <span class="stat-desc" data-section="profiles" data-value="p3-stat">From detection to in-cab alert</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDGE TECH — CANVAS SCROLL ANIMATION -->
+  <section id="edge-tech">
+    <div class="edge-sticky">
+      <div class="edge-canvas-wrap">
+        <div class="mine-infographic">
+          <svg class="mine-infographic-svg" viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="mineGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(37,120,244,0.08)" stroke-width="0.5" />
+              </pattern>
+            </defs>
+            <rect width="620" height="420" fill="url(#mineGrid)" />
+            <!-- Corridor A -->
+            <rect x="50" y="90" width="520" height="65" fill="rgba(37,120,244,0.05)" stroke="rgba(37,120,244,0.3)"
+              stroke-width="1" stroke-dasharray="8,5" />
+            <text x="58" y="106" fill="rgba(37,120,244,0.55)" font-size="8" font-family="monospace" font-weight="bold"
+              letter-spacing="2">AUTONOMOUS CORRIDOR A</text>
+            <!-- Corridor B -->
+            <rect x="50" y="210" width="520" height="65" fill="rgba(37,120,244,0.05)" stroke="rgba(37,120,244,0.3)"
+              stroke-width="1" stroke-dasharray="8,5" />
+            <text x="58" y="226" fill="rgba(37,120,244,0.55)" font-size="8" font-family="monospace" font-weight="bold"
+              letter-spacing="2">AUTONOMOUS CORRIDOR B</text>
+            <!-- Incursion zone -->
+            <rect x="205" y="90" width="150" height="185" fill="rgba(186,26,26,0.07)" stroke="rgba(186,26,26,0.45)"
+              stroke-width="1" />
+            <text x="280" y="82" text-anchor="middle" fill="rgba(186,26,26,0.75)" font-size="8" font-family="monospace"
+              font-weight="bold" letter-spacing="1">INCURSION ZONE</text>
+            <!-- IoT Mesh lines -->
+            <line x1="50" y1="90" x2="570" y2="90" stroke="rgba(252,181,2,0.22)" stroke-width="1" stroke-dasharray="7,4"
+              class="mg-mesh-anim" />
+            <line x1="50" y1="90" x2="50" y2="275" stroke="rgba(252,181,2,0.22)" stroke-width="1" stroke-dasharray="7,4"
+              class="mg-mesh-anim" style="animation-delay:-1s" />
+            <line x1="570" y1="90" x2="570" y2="275" stroke="rgba(252,181,2,0.22)" stroke-width="1"
+              stroke-dasharray="7,4" class="mg-mesh-anim" style="animation-delay:-2s" />
+            <line x1="50" y1="275" x2="570" y2="275" stroke="rgba(252,181,2,0.22)" stroke-width="1"
+              stroke-dasharray="7,4" class="mg-mesh-anim" style="animation-delay:-0.5s" />
+            <line x1="310" y1="90" x2="310" y2="275" stroke="rgba(252,181,2,0.15)" stroke-width="1"
+              stroke-dasharray="7,4" class="mg-mesh-anim" style="animation-delay:-1.5s" />
+            <!-- IoT Nodes -->
+            <g class="mg-node-anim">
+              <circle cx="50" cy="90" r="5" fill="#FCB502" />
+            </g>
+            <g class="mg-node-anim" style="animation-delay:-0.5s">
+              <circle cx="310" cy="90" r="5" fill="#FCB502" />
+            </g>
+            <g class="mg-node-anim" style="animation-delay:-1s">
+              <circle cx="570" cy="90" r="5" fill="#FCB502" />
+            </g>
+            <g class="mg-node-anim" style="animation-delay:-0.7s">
+              <circle cx="50" cy="275" r="5" fill="#FCB502" />
+            </g>
+            <g class="mg-node-anim" style="animation-delay:-1.5s">
+              <circle cx="310" cy="275" r="5" fill="#FCB502" />
+            </g>
+            <g class="mg-node-anim" style="animation-delay:-0.3s">
+              <circle cx="570" cy="275" r="5" fill="#FCB502" />
+            </g>
+            <!-- AT-01: autonomous truck in corridor A -->
+            <g transform="translate(110,122)">
+              <rect x="-22" y="-11" width="44" height="22" rx="3" fill="rgba(37,120,244,0.12)" stroke="#2578F4"
+                stroke-width="1.5" />
+              <rect x="-20" y="-8" width="15" height="16" rx="1" fill="rgba(37,120,244,0.25)" />
+              <text x="0" y="-17" text-anchor="middle" fill="#2578F4" font-size="9" font-family="monospace">AT-01</text>
+            </g>
+            <!-- AT-02: autonomous truck in corridor B -->
+            <g transform="translate(460,242)">
+              <rect x="-22" y="-11" width="44" height="22" rx="3" fill="rgba(37,120,244,0.12)" stroke="#2578F4"
+                stroke-width="1.5" />
+              <rect x="7" y="-8" width="15" height="16" rx="1" fill="rgba(37,120,244,0.25)" />
+              <text x="0" y="-17" text-anchor="middle" fill="#2578F4" font-size="9" font-family="monospace">AT-02</text>
+            </g>
+            <!-- LV-09: CRITICAL — in incursion zone -->
+            <g class="mg-danger-ring-anim">
+              <circle cx="280" cy="170" r="30" fill="rgba(186,26,26,0.08)" stroke="rgba(186,26,26,0.45)"
+                stroke-width="1" />
+            </g>
+            <g transform="translate(280,170)">
+              <rect x="-15" y="-9" width="30" height="18" rx="3" fill="rgba(186,26,26,0.15)" stroke="#BA1A1A"
+                stroke-width="1.5" />
+              <circle cx="20" cy="-14" r="8" fill="#BA1A1A" />
+              <text x="20" y="-10" text-anchor="middle" fill="white" font-size="10" font-weight="bold"
+                font-family="monospace">!</text>
+              <text x="0" y="-18" text-anchor="middle" fill="#BA1A1A" font-size="9" font-family="monospace">LV-09</text>
+            </g>
+            <!-- Danger connection: LV-09 to AT-01 -->
+            <line x1="265" y1="161" x2="132" y2="127" stroke="rgba(186,26,26,0.55)" stroke-width="1.5"
+              stroke-dasharray="5,3" class="mg-alert-flash" />
+            <!-- LV-03: nominal -->
+            <g transform="translate(510,335)">
+              <rect x="-15" y="-9" width="30" height="18" rx="3" fill="rgba(34,197,94,0.1)" stroke="#22C55E"
+                stroke-width="1.5" />
+              <text x="0" y="-16" text-anchor="middle" fill="#22C55E" font-size="9" font-family="monospace">LV-03</text>
+            </g>
+            <!-- LV-07: nominal -->
+            <g transform="translate(130,360)">
+              <rect x="-15" y="-9" width="30" height="18" rx="3" fill="rgba(34,197,94,0.1)" stroke="#22C55E"
+                stroke-width="1.5" />
+              <text x="0" y="-16" text-anchor="middle" fill="#22C55E" font-size="9" font-family="monospace">LV-07</text>
+            </g>
+            <!-- Collision alert badge -->
+            <rect x="390" y="44" width="210" height="26" fill="rgba(186,26,26,0.15)" stroke="rgba(186,26,26,0.5)"
+              stroke-width="1" class="mg-alert-flash" />
+            <circle cx="403" cy="57" r="4" fill="#BA1A1A" class="mg-alert-flash" />
+            <text x="412" y="60" fill="#BA1A1A" font-size="8" font-family="monospace" font-weight="bold"
+              letter-spacing="1">COLLISION ALERT — ZONE C7</text>
+            <!-- HUD status bar -->
+            <rect x="0" y="0" width="620" height="36" fill="rgba(10,10,10,0.82)" />
+            <text x="14" y="14" fill="rgba(37,120,244,0.9)" font-size="9" font-family="monospace" font-weight="bold"
+              letter-spacing="2">MINEGUARD</text>
+            <text x="14" y="27" fill="rgba(107,114,128,0.7)" font-size="7.5" font-family="monospace">DIGITAL SAFETY MESH
+              — SECTOR NORTE — LIVE</text>
+            <circle cx="540" cy="13" r="4" fill="#22C55E" /><text x="548" y="17" fill="#22C55E" font-size="7.5"
+              font-family="monospace" font-weight="600">V2X</text>
+            <circle cx="572" cy="13" r="4" fill="#22C55E" /><text x="580" y="17" fill="#22C55E" font-size="7.5"
+              font-family="monospace" font-weight="600">GPS</text>
+            <!-- Legend -->
+            <rect x="0" y="392" width="620" height="28" fill="rgba(10,10,10,0.68)" />
+            <g transform="translate(12,406)">
+              <rect x="0" y="-6" width="11" height="11" rx="1" fill="none" stroke="#2578F4" stroke-width="1.5" />
+              <text x="16" y="4" fill="rgba(150,160,170,0.9)" font-size="8" font-family="monospace">Autonomous</text>
+              <rect x="95" y="-6" width="11" height="11" rx="1" fill="none" stroke="#22C55E" stroke-width="1.5" />
+              <text x="111" y="4" fill="rgba(150,160,170,0.9)" font-size="8" font-family="monospace">Light
+                Vehicle</text>
+              <circle cx="192" cy="0" r="5" fill="#FCB502" />
+              <text x="201" y="4" fill="rgba(150,160,170,0.9)" font-size="8" font-family="monospace">IoT Node</text>
+              <rect x="254" y="-6" width="11" height="11" rx="1" fill="none" stroke="#BA1A1A" stroke-width="1.5" />
+              <text x="270" y="4" fill="rgba(150,160,170,0.9)" font-size="8" font-family="monospace">Critical
+                Alert</text>
+            </g>
+          </svg>
+        </div>
+        <div class="tech-tags">
+          <div class="tech-tag visible" id="ttag-gnss">
+            <span class="tt-dot blue"></span>
+            <div class="tt-body">
+              <span class="tt-label" data-section="edge" data-value="tag1-label">GNSS RTK</span>
+              <span class="tt-val">&#177;2cm</span>
             </div>
           </div>
+          <div class="tech-tag visible" id="ttag-latency">
+            <span class="tt-dot yellow"></span>
+            <div class="tt-body">
+              <span class="tt-label" data-section="edge" data-value="tag2-label">Alert Latency</span>
+              <span class="tt-val">43ms</span>
+            </div>
+          </div>
+          <div class="tech-tag visible" id="ttag-mesh">
+            <span class="tt-dot green"></span>
+            <div class="tt-body">
+              <span class="tt-label" data-section="edge" data-value="tag3-label">Mesh Network</span>
+              <span class="tt-val">7 Nodes</span>
+            </div>
+          </div>
+          <div class="tech-tag visible" id="ttag-v2x">
+            <span class="tt-dot blue"></span>
+            <div class="tt-body">
+              <span class="tt-label" data-section="edge" data-value="tag4-label">V2X Protocol</span>
+              <span class="tt-val" data-section="edge" data-value="tag4-val">Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="edge-panels">
+        <div class="edge-panel" id="ep-1">
+          <div class="section-tag" data-section="edge" data-value="p1-tag">Edge Computing</div>
+          <h2 data-section="edge" data-value="p1-heading">Processing at the <span class="accent-yellow">Source</span>
+          </h2>
+          <p data-section="edge" data-value="p1-body">MineGuard's Edge Node processes all proximity data locally on the
+            vehicle, eliminating cloud round-trip
+            latency entirely. Critical safety decisions are computed and dispatched in milliseconds — no internet
+            required.</p>
+        </div>
+        <div class="edge-panel" id="ep-2">
+          <div class="section-tag" data-section="edge" data-value="p2-tag">V2X Protocol</div>
+          <h2 data-section="edge" data-value="p2-heading">Vehicle-to-Everything <span
+              class="accent-blue">Communication</span></h2>
+          <p data-section="edge" data-value="p2-body">Industry-standard V2X enables direct vehicle-to-vehicle data
+            exchange without centralized infrastructure.
+            The mesh self-heals and maintains safety coverage even in deep pit zones with no connectivity.</p>
+        </div>
+        <div class="edge-panel" id="ep-3">
+          <div class="section-tag" data-section="edge" data-value="p3-tag">Digital Safety Mesh</div>
+          <h2 data-section="edge" data-value="p3-heading">An Invisible <span class="accent-yellow">Safety Net</span>
+          </h2>
+          <p data-section="edge" data-value="p3-body">Seven synchronized IoT nodes form a geofenced perimeter around
+            each autonomous corridor. Any incursion
+            triggers a multi-layered alert cascade to the driver, FMS, and control room within 43 milliseconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <ul class="plan-features">
-            <li><span class="feature-icon">✔</span> <span data-section="subscription" data-value="feature1">Professional Sensor Installation</span></li>
-            <li><span class="feature-icon">✔</span> <span data-section="subscription" data-value="feature2">Maximum Detection Range & Capacity</span></li>
-            <li><span class="feature-icon">✔</span> <span data-section="subscription" data-value="feature3">Real-Time Monitoring Map (24/7)</span></li>
-            <li><span class="feature-icon">✔</span> <span data-section="subscription" data-value="feature4">V2X Anti-Collision Protocol</span></li>
-            <li><span class="feature-icon">✔</span> <span data-section="subscription" data-value="feature5">Cloud Data Storage & Analytics</span></li>
-          </ul>
+  <!-- MISSION / VISION -->
+  <section id="mission-vision">
+    <div class="mv-grid">
+      <div class="mv-card mission fade-up">
+        <div class="mv-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
+          </svg>
+        </div>
+        <div class="mv-label" data-section="solution" data-value="mission-label">Mission</div>
+        <h3 class="mv-title" data-section="solution" data-value="mission-title">Protect every worker, every shift</h3>
+        <p class="mv-text" data-section="solution" data-value="mission-text">Deliver IoT-based technological solutions
+          that prevent accidents in mining environments through real-time monitoring and early warning systems —
+          protecting lives and optimizing operational safety.</p>
+      </div>
+      <div class="mv-card vision fade-up">
+        <div class="mv-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2578F4" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+          </svg>
+        </div>
+        <div class="mv-label" data-section="solution" data-value="vision-label">Vision</div>
+        <h3 class="mv-title" data-section="solution" data-value="vision-title">The global standard for mining safety
+        </h3>
+        <p class="mv-text" data-section="solution" data-value="vision-text">Become the leading smart security solution
+          for autonomous mining operations globally, driving the digital transformation of the sector towards safer,
+          more efficient and reliable environments.</p>
+      </div>
+    </div>
+  </section>
 
-          <button class="subscribe-button-card" data-section="subscription" data-value="cta">
-            Subscribe Now
+  <!-- HOW IT WORKS / TECHNOLOGY -->
+  <section id="how-it-works">
+    <div class="section-header">
+      <div class="section-tag" data-section="how-it-works" data-value="tag">Technology</div>
+      <h2 class="section-title" data-section="how-it-works" data-value="heading">HOW THE <span
+          class="accent-blue">MESH</span> WORKS</h2>
+    </div>
+    <div class="tech-steps">
+      <div class="tech-step fade-up">
+        <div class="step-num">01</div>
+        <div class="step-icon-wrap yellow">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="2" />
+            <path
+              d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14" />
+          </svg>
+        </div>
+        <h3 class="step-title" data-section="how-it-works" data-value="s1-title">Signal Detection</h3>
+        <p class="step-desc" data-section="how-it-works" data-value="s1-body">IoT nodes mounted on vehicles and
+          infrastructure continuously broadcast GNSS positions via
+          V2X protocol. The mesh self-organizes to maintain coverage even in deep pit zones.</p>
+      </div>
+      <div class="tech-step fade-up">
+        <div class="step-num">02</div>
+        <div class="step-icon-wrap blue">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2578F4" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+        </div>
+        <h3 class="step-title" data-section="how-it-works" data-value="s2-title">Edge Processing</h3>
+        <p class="step-desc" data-section="how-it-works" data-value="s2-body">The onboard Edge Node analyzes proximity
+          data locally. Collision trajectories are computed
+          using predictive algorithms — no cloud dependency for critical alerts.</p>
+      </div>
+      <div class="tech-step fade-up">
+        <div class="step-num">03</div>
+        <div class="step-icon-wrap red">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#BA1A1A" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+        </div>
+        <h3 class="step-title" data-section="how-it-works" data-value="s3-title">Multi-Layer Alert</h3>
+        <p class="step-desc" data-section="how-it-works" data-value="s3-body">At 43ms, simultaneous alerts fire: to the
+          light vehicle HMI device, the autonomous truck's
+          FMS, and the control room supervisor dashboard — all before a human can blink.</p>
+      </div>
+      <div class="tech-step fade-up">
+        <div class="step-num">04</div>
+        <div class="step-icon-wrap green">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
+        </div>
+        <h3 class="step-title" data-section="how-it-works" data-value="s4-title">Safe Resolution</h3>
+        <p class="step-desc" data-section="how-it-works" data-value="s4-body">Geofenced corridors auto-update. The
+          incident is logged with GPS coordinates, timestamps
+          and vehicle IDs — feeding the analytics dashboard for continuous safety improvement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DASHBOARD MOCKUP -->
+  <section id="about-the-product">
+    <div class="section-header">
+      <div class="section-tag" data-section="product" data-value="tag">Product</div>
+      <h2 class="section-title" data-section="product" data-value="heading">SEE IT IN <span
+          class="accent-yellow">ACTION</span></h2>
+      <p class="section-subtitle" data-section="product" data-value="subtitle">Watch MineGuard prevent a real collision
+        — from IoT detection to in-cab alert — in 43 milliseconds.</p>
+    </div>
+
+    <div class="product-video-wrap fade-up">
+      <div class="pvw-chrome">
+        <div class="chrome-dots">
+          <span class="cd-red"></span>
+          <span class="cd-yellow"></span>
+          <span class="cd-green"></span>
+        </div>
+        <span class="chrome-title" data-section="product" data-value="chrome-title">MineGuard Control Center &mdash;
+          Prototype Preview</span>
+        <div class="chrome-live">
+          <span class="live-dot"></span>
+          <span data-section="product" data-value="chrome-badge">DEMO</span>
+        </div>
+      </div>
+      <div class="pvw-video-area">
+        <div class="video-facade" data-video-id="miKJylB6lu0">
+          <img class="vf-thumbnail" src="https://img.youtube.com/vi/miKJylB6lu0/maxresdefault.jpg"
+            alt="MineGuard Product Demo" loading="lazy">
+          <div class="vf-overlay"></div>
+          <button class="vf-play-btn" aria-label="Play demo video">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="6 3 20 12 6 21 6 3" />
+            </svg>
           </button>
-          
-          <p class="card-footer" data-section="subscription" data-value="footer-note">No hidden fees. Full technical support included.</p>
+          <p class="vf-label" data-section="product" data-value="video-label">Product Demonstration Video</p>
         </div>
       </div>
-    </section>
-        <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-grid">
-          <div class="footer-col branding">
-            <div class="footer-logo">
-              <span class="logo-text">VERT<span class="accent">EX</span></span>
-            </div>
-            <p class="footer-tagline" data-section="footer" data-value="tagline">
-              Elevating safety in autonomous operations through high-precision technology and real-time connectivity.
-            </p>
-            <div class="social-links">
-              <a href="#" class="social-icon">LinkedIn</a>
-              <a href="#" class="social-icon">Twitter</a>
-            </div>
-          </div>
+    </div>
+  </section>
 
-          <div class="footer-col">
-            <h4 class="footer-title" data-section="footer" data-value="col1-title">Solutions</h4>
-            <ul class="footer-links">
-              <li><a href="#solution"     data-section="footer" data-value="col1-link1">Technology</a></li>
-              <li><a href="#how-it-works" data-section="footer" data-value="col1-link2">Target Audience</a></li>
-              <li><a href="#faq"          data-section="footer" data-value="col1-link3">FAQ</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4 class="footer-title" data-section="footer" data-value="col2-title">Company</h4>
-            <ul class="footer-links">
-              <li><a href="#about-the-team" data-section="footer" data-value="col2-link1">About the team</a></li>
-              <li><a href="terms.html"      data-section="footer" data-value="col2-link2">Privacy Policy</a></li>
-              <li><a href="#subscription"   data-section="footer" data-value="col2-link3">Subscription</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4 class="footer-title" data-section="footer" data-value="col3-title">Get in Touch</h4>
-            <p class="contact-info">support@mineguard.io</p>
-            <p class="contact-info">+51 987 654 321</p>
-            <p class="contact-info">San Miguel, Lima, Peru</p>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p data-section="footer" data-value="copyright">&copy; 2024 MineGuard. All rights reserved.</p>
-          <div class="footer-legal">
-            <a href="terms.html" data-section="footer" data-value="terms">Terms of Service</a>
-            <a href="terms.html" data-section="footer" data-value="cookies">Cookies Policy</a>
-          </div>
+  <!-- TEAM -->
+  <section id="about-the-team">
+    <div class="section-header">
+      <div class="section-tag" data-section="team" data-value="tag">Leadership</div>
+      <h2 class="section-title" data-section="team" data-value="heading">THE TEAM <span
+          class="accent-blue">BEHIND</span> MINEGUARD</h2>
+      <p class="section-subtitle" data-section="team" data-value="subheading">A multidisciplinary team of engineers and
+        strategists united by a single mission: zero mining fatalities.</p>
+    </div>
+    <div class="hero-bg">
+      <div class="radar">
+        <div class="radar-circle"></div>
+        <div class="radar-circle"></div>
+        <div class="radar-circle"></div>
+        <div class="radar-circle"></div>
+        <div class="radar-sweep"></div>
+        <div class="radar-dot"></div>
+        <div class="radar-dot"></div>
+        <div class="radar-dot"></div>
+      </div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-up">
+        <img src="assets/img/team/foto-gabriel.png" alt="Gabriel Gordon">
+        <div class="team-info">
+          <h3 class="team-name">Gabriel Gordon Salas</h3>
+          <span class="team-role" data-section="team" data-value="m1-role">CEO &amp; Co-Founder</span>
+          <p class="team-bio" data-section="team" data-value="m1-bio">Product vision &amp; strategic leadership</p>
         </div>
       </div>
-    </footer>
-        <script type="text/javascript" src="main.js"></script>
-    </body>
-    
+      <div class="team-card fade-up">
+        <img src="assets/img/team/fotoAlaya.JPG" alt="Rodrigo Alaya">
+        <div class="team-info">
+          <h3 class="team-name">Rodrigo Alaya Cabrera</h3>
+          <span class="team-role" data-section="team" data-value="m2-role">CTO &amp; Co-Founder</span>
+          <p class="team-bio" data-section="team" data-value="m2-bio">Architecture &amp; IoT infrastructure</p>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img src="assets/img/team/FotoMelgarejo.png" alt="Marcia Melgarejo">
+        <div class="team-info">
+          <h3 class="team-name">Marcia Melgarejo Gomez</h3>
+          <span class="team-role" data-section="team" data-value="m3-role">Head of Product &amp; UX</span>
+          <p class="team-bio" data-section="team" data-value="m3-bio">User experience &amp; product strategy</p>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img src="assets/img/team/foto_guevara.png" alt="Jorge Guevara">
+        <div class="team-info">
+          <h3 class="team-name">Jorge Guevara Tejada</h3>
+          <span class="team-role" data-section="team" data-value="m4-role">Lead IoT Engineer</span>
+          <p class="team-bio" data-section="team" data-value="m4-bio">Hardware integration &amp; mesh protocols</p>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img src="assets/img/team/renato_zegarra.png" alt="Renato Zegarra">
+        <div class="team-info">
+          <h3 class="team-name">Renato Zegarra Lopez</h3>
+          <span class="team-role" data-section="team" data-value="m5-role">Lead Data Scientist</span>
+          <p class="team-bio" data-section="team" data-value="m5-bio">Predictive analytics &amp; risk modeling</p>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img src="assets/img/team/FotoRomero.png" alt="Russell Romero">
+        <div class="team-info">
+          <h3 class="team-name">Russell Romero Qwistgaard</h3>
+          <span class="team-role" data-section="team" data-value="m6-role">Lead Backend Engineer</span>
+          <p class="team-bio" data-section="team" data-value="m6-bio">Cloud infrastructure &amp; real-time systems</p>
+        </div>
+      </div>
+      <div class="team-card fade-up">
+        <img src="assets/img/team/fotoGonzales.jpeg" alt="Javier Gonzales">
+        <div class="team-info">
+          <h3 class="team-name">Javier Gonzales Alvarado</h3>
+          <span class="team-role" data-section="team" data-value="m7-role">Frontend Lead</span>
+          <p class="team-bio" data-section="team" data-value="m7-bio">Dashboard engineering &amp; UX implementation</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team Video -->
+    <div class="team-video-block fade-up">
+      <div class="tvb-header">
+        <div class="section-tag" data-section="team" data-value="video-tag">Team Presentation</div>
+        <h2 class="tvb-title" data-section="team" data-value="video-title">MEET THE PEOPLE <span
+            class="accent-blue">BEHIND</span> THE MISSION</h2>
+        <p class="tvb-subtitle" data-section="team" data-value="video-subtitle">A two-minute look at who we are, what
+          drives us, and why we built MineGuard.</p>
+      </div>
+      <div class="tvb-chrome">
+        <div class="tvb-chrome-bar">
+          <div class="tvb-chrome-dots">
+            <span class="tvb-dot tvb-dot--red"></span>
+            <span class="tvb-dot tvb-dot--yellow"></span>
+            <span class="tvb-dot tvb-dot--green"></span>
+          </div>
+          <span class="tvb-chrome-label" data-section="team" data-value="video-chrome-label">MineGuard — Team
+            Presentation</span>
+          <div class="tvb-chrome-badge">
+            <span class="live-dot"></span>
+            <span data-section="team" data-value="video-chrome-badge">TEAM</span>
+          </div>
+        </div>
+        <div class="tvb-video-area">
+          <div class="video-facade" data-video-id="miKJylB6lu0">
+            <img class="vf-thumbnail" src="https://img.youtube.com/vi/miKJylB6lu0/maxresdefault.jpg"
+              alt="MineGuard Team Presentation" loading="lazy">
+            <div class="vf-overlay"></div>
+            <button class="vf-play-btn" aria-label="Play team video">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="6 3 20 12 6 21 6 3" />
+              </svg>
+            </button>
+            <p class="vf-label" data-section="team" data-value="video-label">Team Presentation Video</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-header">
+      <div class="section-tag" data-section="faq" data-value="tag">FAQ</div>
+      <h2 class="section-title" data-section="faq" data-value="heading">COMMON <span
+          class="accent-yellow">QUESTIONS</span></h2>
+    </div>
+    <div class="faq-container">
+      <details class="faq-item" open>
+        <summary class="faq-question">
+          <span data-section="faq" data-value="q1">How does MineGuard integrate with existing autonomous fleets?</span>
+          <span class="faq-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p data-section="faq" data-value="a1">MineGuard uses industry-standard V2X communication protocols to connect
+            with Fleet Management Systems (FMS). It is installed non-intrusively as an additional safety layer — no
+            modifications to existing vehicle firmware are required.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span data-section="faq" data-value="q2">What is the precision level of the positioning system?</span>
+          <span class="faq-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p data-section="faq" data-value="a2">MineGuard utilizes high-precision GNSS with RTK corrections, providing
+            centimeter-level accuracy (&#177;2cm). This precision is critical for safe interaction between light
+            vehicles and autonomous mining giants weighing over 300 tonnes.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span data-section="faq" data-value="q3">Does it work in areas without conventional internet coverage?</span>
+          <span class="faq-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p data-section="faq" data-value="a3">Yes. MineGuard operates on private LTE/5G mining networks and has a
+            local Mesh Network fallback mode. Critical proximity alerts are issued even with zero central server
+            connectivity.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span data-section="faq" data-value="q4">What is the standard implementation timeframe?</span>
+          <span class="faq-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p data-section="faq" data-value="a4">A standard deployment for a fleet of 20 light vehicles takes
+            approximately 2 weeks, including digital environment calibration, IoT node positioning, FMS integration, and
+            full personnel training.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="subscription">
+    <div class="section-header">
+      <div class="section-tag" data-section="subscription" data-value="tag">Pricing</div>
+      <h2 class="section-title" data-section="subscription" data-value="heading">ENTERPRISE <span
+          class="accent-yellow">PLAN</span></h2>
+      <p class="section-subtitle" data-section="subscription" data-value="subtitle">One plan. Full protection. Zero
+        compromise.</p>
+    </div>
+    <div class="pricing-layout">
+      <div class="pricing-visual fade-up">
+        <div class="mesh-container">
+          <div class="alert-badge-mesh">
+            <span class="abm-pulse"></span>
+            <span data-section="subscription" data-value="alert">Alert Active</span>
+          </div>
+          <svg class="mesh-svg" viewBox="0 0 400 400">
+            <line x1="50" y1="50" x2="200" y2="80" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
+            <line x1="200" y1="80" x2="350" y2="50" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
+            <line x1="50" y1="50" x2="80" y2="200" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
+            <line x1="80" y1="200" x2="200" y2="200" stroke="rgba(37,120,244,0.5)" stroke-width="1.5" />
+            <line x1="200" y1="200" x2="320" y2="200" stroke="rgba(37,120,244,0.5)" stroke-width="1.5" />
+            <line x1="320" y1="200" x2="350" y2="50" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
+            <line x1="200" y1="80" x2="200" y2="200" stroke="rgba(37,120,244,0.4)" stroke-width="1" />
+            <line x1="80" y1="200" x2="120" y2="340" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
+            <line x1="120" y1="340" x2="200" y2="320" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
+            <line x1="200" y1="320" x2="280" y2="340" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
+            <line x1="280" y1="340" x2="320" y2="200" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
+            <line x1="200" y1="200" x2="200" y2="320" stroke="rgba(37,120,244,0.4)" stroke-width="1" />
+            <polygon points="200,80 350,50 320,200 200,200" fill="rgba(37,120,244,0.05)" stroke="rgba(37,120,244,0.15)"
+              stroke-width="1" />
+            <polygon points="80,200 200,200 120,340" fill="rgba(186,26,26,0.08)" stroke="rgba(186,26,26,0.4)"
+              stroke-width="1.5" stroke-dasharray="5,4" />
+          </svg>
+          <div class="mesh-node" style="top:46px;left:46px"></div>
+          <div class="mesh-node" style="top:76px;left:196px"></div>
+          <div class="mesh-node" style="top:46px;left:346px"></div>
+          <div class="mesh-node" style="top:196px;left:76px"></div>
+          <div class="mesh-node mesh-node-active" style="top:196px;left:196px"></div>
+          <div class="mesh-node" style="top:196px;left:316px"></div>
+          <div class="mesh-node" style="top:336px;left:116px"></div>
+          <div class="mesh-node" style="top:316px;left:196px"></div>
+          <div class="mesh-node" style="top:336px;left:276px"></div>
+        </div>
+      </div>
+
+      <div class="pricing-card fade-up">
+        <div class="plan-badge" data-section="subscription" data-value="plan-tag">Enterprise</div>
+        <h3 class="plan-name" data-section="subscription" data-value="plan-name">Full Safety Suite</h3>
+        <div class="plan-price">
+          <span class="pp-currency" data-section="subscription" data-value="currency">$</span>
+          <span class="pp-amount" data-section="subscription" data-value="amount">200</span>
+          <span class="pp-period" data-section="subscription" data-value="period">/unit/month</span>
+        </div>
+        <p class="plan-min" data-section="subscription" data-value="plan-min">Minimum 10 units &bull; Annual commitment
+        </p>
+        <ul class="plan-features">
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="subscription" data-value="feature1">Professional Sensor Installation &amp;
+              Calibration</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="subscription" data-value="feature2">Maximum Detection Range &amp; V2X Capacity</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="subscription" data-value="feature3">Real-Time Monitoring Dashboard (24/7)</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="subscription" data-value="feature4">Anti-Collision V2X Protocol (Full Stack)</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="subscription" data-value="feature5">Cloud Data Storage, Analytics &amp; Export</span>
+          </li>
+          <li>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span data-section="subscription" data-value="feature6">Dedicated Technical Support &amp; SLA
+              Guarantee</span>
+          </li>
+        </ul>
+        <a href="https://mineguard-iot.netlify.app/iam/sign-in" class="btn-primary btn-full" data-section="subscription"
+          data-value="cta">Get Started</a>
+        <p class="plan-note" data-section="subscription" data-value="footer-note">No hidden fees. Full technical support
+          included.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col branding-col">
+          <div class="footer-logo">
+            <img src="assets/mineguard3.png" alt="MineGuard" width="30">
+            <span>MINE<span class="accent-yellow">GUARD</span></span>
+          </div>
+          <p class="footer-tagline" data-section="footer" data-value="tagline">Elevating safety in autonomous operations
+            through high-precision IoT and real-time intelligence.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title" data-section="footer" data-value="col1-title">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="#solution" data-section="footer" data-value="col1-link1">Technology</a></li>
+            <li><a href="#profiles" data-section="footer" data-value="col1-link4">Who It's For</a></li>
+            <li><a href="#how-it-works" data-section="footer" data-value="col1-link2">How It Works</a></li>
+            <li><a href="#faq" data-section="footer" data-value="col1-link3">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title" data-section="footer" data-value="col2-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#about-the-team" data-section="footer" data-value="col2-link1">Leadership Team</a></li>
+            <li><a href="terms.html" data-section="footer" data-value="col2-link2">Privacy Policy</a></li>
+            <li><a href="#subscription" data-section="footer" data-value="col2-link3">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title" data-section="footer" data-value="col3-title">Get in Touch</h4>
+          <p class="contact-info" data-section="footer" data-value="contact-email">support@mineguard.io</p>
+          <p class="contact-info" data-section="footer" data-value="contact-phone">+51 987 654 321</p>
+          <p class="contact-info" data-section="footer" data-value="contact-location">San Miguel, Lima, Peru</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-section="footer" data-value="copyright">&copy; 2025 MineGuard by Vertex. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html" data-section="footer" data-value="terms">Terms of Service</a>
+          <a href="terms.html" data-section="footer" data-value="cookies">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
