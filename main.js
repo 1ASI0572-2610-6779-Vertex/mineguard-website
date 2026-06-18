@@ -2,6 +2,249 @@
    MINEGUARD — main.js
 ══════════════════════════════════════════════════ */
 
+/* ── REGISTRATION MODAL ────────────────────────── */
+
+const API_BASE_URL = 'http://localhost:8080';
+
+let _currentLangData = {};
+
+/* PLAN DEFINITIONS — calculator source of truth */
+const PLANS = [
+  {
+    key: 'starter',
+    nameKey: 'register.rec-starter-name',
+    price: '$250',
+    threshold: 49,
+  },
+  {
+    key: 'standard',
+    nameKey: 'register.rec-standard-name',
+    price: '$499',
+    threshold: 200,
+  },
+  {
+    key: 'enterprise',
+    nameKey: 'register.rec-enterprise-name',
+    price: '$899',
+    threshold: Infinity,
+  },
+];
+
+/* ── i18n helper ────────────────────────────────── */
+function t(key) {
+  const dot = key.indexOf('.');
+  const section = key.slice(0, dot);
+  const value = key.slice(dot + 1);
+  return (_currentLangData[section] && _currentLangData[section][value]) || '';
+}
+
+/* ── API — FIREWALL: ONLY 3 FIELDS SENT ─────────── */
+async function registerCompany(companyName, adminFullName, adminEmail) {
+  const res = await fetch(`${API_BASE_URL}/api/v1/subscriptions/company-registration`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ companyName, adminFullName, adminEmail }),
+  });
+  if (!res.ok) {
+    const err = new Error('API_ERROR');
+    err.status = res.status;
+    throw err;
+  }
+  return res.json();
+}
+
+/* ── CALCULATOR ─────────────────────────────────── */
+function calcRecommendedPlan(fleetSize) {
+  return PLANS.find(p => fleetSize <= p.threshold) || PLANS[PLANS.length - 1];
+}
+
+function updatePlanCard() {
+  const fleetSize = parseInt(document.getElementById('reg-fleet-size').value, 10);
+  const card = document.getElementById('reg-rec-card');
+  const nameEl = document.getElementById('reg-rec-name');
+  const priceEl = document.getElementById('reg-rec-price');
+  const fleetDisplay = document.getElementById('fleet-size-display');
+  const operatorDisplay = document.getElementById('operator-count-display');
+
+  fleetDisplay.textContent = document.getElementById('reg-fleet-size').value;
+  operatorDisplay.textContent = document.getElementById('reg-operator-count').value;
+
+  const plan = calcRecommendedPlan(fleetSize);
+  const prevPlan = card.dataset.plan;
+
+  if (prevPlan !== plan.key) {
+    card.dataset.plan = plan.key;
+    /* brief pop animation on plan change */
+    card.classList.remove('plan-pop');
+    void card.offsetWidth;
+    card.classList.add('plan-pop');
+  }
+
+  nameEl.textContent = t(plan.nameKey) || plan.nameKey.split('.').pop();
+  priceEl.innerHTML = `${plan.price}<small>/mo</small>`;
+}
+
+function refreshPlanCardTranslations() {
+  const card = document.getElementById('reg-rec-card');
+  if (!card) return;
+  const fleetSize = parseInt(document.getElementById('reg-fleet-size').value, 10);
+  const plan = calcRecommendedPlan(fleetSize);
+  document.getElementById('reg-rec-name').textContent = t(plan.nameKey) || plan.nameKey.split('.').pop();
+}
+
+/* ── MODAL LIFECYCLE ────────────────────────────── */
+function openRegistrationModal(plan) {
+  resetRegModal();
+
+  const overlay = document.getElementById('reg-modal');
+  overlay.setAttribute('aria-hidden', 'false');
+  overlay.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+
+  /* Pre-seed sliders to match the plan the user clicked */
+  if (plan === 'starter') {
+    document.getElementById('reg-fleet-size').value = 25;
+  } else if (plan === 'standard') {
+    document.getElementById('reg-fleet-size').value = 100;
+  } else if (plan === 'enterprise') {
+    document.getElementById('reg-fleet-size').value = 250;
+  }
+
+  updatePlanCard();
+
+  setTimeout(() => document.getElementById('reg-fleet-size').focus(), 320);
+}
+
+function closeRegistrationModal() {
+  const overlay = document.getElementById('reg-modal');
+  overlay.classList.remove('is-open');
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function resetRegModal() {
+  const form = document.getElementById('reg-form');
+  const success = document.getElementById('reg-success');
+  const apiErr = document.getElementById('reg-api-err');
+  const submit = document.getElementById('reg-submit');
+  const btnText = document.getElementById('reg-btn-text');
+
+  form.reset();
+  form.style.display = '';
+  success.style.display = 'none';
+  apiErr.style.display = 'none';
+  apiErr.textContent = '';
+  submit.disabled = false;
+  submit.classList.remove('is-loading');
+  btnText.textContent = t('register.submit') || 'Register Company';
+
+  ['company-name', 'admin-name', 'admin-email'].forEach(field => {
+    const input = document.getElementById('reg-' + field);
+    const errSpan = document.getElementById('err-' + field);
+    if (input) input.classList.remove('has-error');
+    if (errSpan) errSpan.textContent = '';
+  });
+}
+
+function validateRegForm() {
+  const companyName = document.getElementById('reg-company-name');
+  const adminName = document.getElementById('reg-admin-name');
+  const adminEmail = document.getElementById('reg-admin-email');
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let valid = true;
+
+  [
+    { input: companyName, errId: 'err-company-name', check: v => v.trim().length > 0 },
+    { input: adminName,   errId: 'err-admin-name',   check: v => v.trim().length > 0 },
+    { input: adminEmail,  errId: 'err-admin-email',  check: v => v.trim().length > 0 },
+  ].forEach(({ input, errId, check }) => {
+    const span = document.getElementById(errId);
+    input.classList.remove('has-error');
+    span.textContent = '';
+    if (!check(input.value)) {
+      input.classList.add('has-error');
+      span.textContent = t('register.err-required');
+      valid = false;
+    }
+  });
+
+  if (valid && !emailRe.test(adminEmail.value.trim())) {
+    adminEmail.classList.add('has-error');
+    document.getElementById('err-admin-email').textContent = t('register.err-email');
+    valid = false;
+  }
+
+  return valid;
+}
+
+/* ── INIT ───────────────────────────────────────── */
+function initRegistrationModal() {
+  const overlay  = document.getElementById('reg-modal');
+  const form     = document.getElementById('reg-form');
+  const fleetSlider    = document.getElementById('reg-fleet-size');
+  const operatorSlider = document.getElementById('reg-operator-count');
+
+  /* Calculator — live updates */
+  fleetSlider.addEventListener('input', updatePlanCard);
+  operatorSlider.addEventListener('input', updatePlanCard);
+
+  /* Close triggers */
+  document.getElementById('reg-close').addEventListener('click', closeRegistrationModal);
+  document.getElementById('reg-success-close').addEventListener('click', closeRegistrationModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeRegistrationModal(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeRegistrationModal();
+  });
+
+  /* Submit */
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!validateRegForm()) return;
+
+    const submit  = document.getElementById('reg-submit');
+    const btnText = document.getElementById('reg-btn-text');
+    const apiErr  = document.getElementById('reg-api-err');
+    const success = document.getElementById('reg-success');
+
+    submit.disabled = true;
+    submit.classList.add('is-loading');
+    btnText.textContent = t('register.submitting') || 'Registering...';
+    apiErr.style.display = 'none';
+
+    /* ── TAREA 4 FIREWALL: calculator fields are intentionally omitted ── */
+    const companyName  = document.getElementById('reg-company-name').value.trim();
+    const adminFullName = document.getElementById('reg-admin-name').value.trim();
+    const adminEmail   = document.getElementById('reg-admin-email').value.trim();
+
+    try {
+      await registerCompany(companyName, adminFullName, adminEmail);
+      form.style.display = 'none';
+      success.style.display = '';
+    } catch (err) {
+      submit.disabled = false;
+      submit.classList.remove('is-loading');
+      btnText.textContent = t('register.submit') || 'Register Company';
+      apiErr.style.display = '';
+      apiErr.textContent = err.status === 409
+        ? t('register.err-conflict')
+        : t('register.err-api');
+    }
+  });
+
+  updatePlanCard();
+  applyPlaceholders();
+}
+
+function applyPlaceholders() {
+  document.querySelectorAll('[data-section-ph]').forEach(el => {
+    const section = el.dataset.sectionPh;
+    const value   = el.dataset.valuePh;
+    if (_currentLangData[section] && _currentLangData[section][value]) {
+      el.placeholder = _currentLangData[section][value];
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
@@ -56,6 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`i18n/${lang}.json`)
       .then(res => res.json())
       .then(data => {
+        _currentLangData = data;
         textsToChange.forEach(el => {
           const section = el.dataset.section;
           const value = el.dataset.value;
@@ -63,12 +307,14 @@ document.addEventListener('DOMContentLoaded', () => {
             el.innerHTML = data[section][value];
           }
         });
+        applyPlaceholders();
+        refreshPlanCardTranslations();
       })
       .catch(() => { });
   }
 
   const savedLang = localStorage.getItem('mg-lang') || 'en';
-  if (savedLang !== 'en') applyLanguage(savedLang);
+  applyLanguage(savedLang);
 
   langButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -78,6 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  initRegistrationModal();
   initVideoFacades();
 
   document.querySelectorAll('.faq-item').forEach(item => {
