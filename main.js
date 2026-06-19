@@ -326,6 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initRegistrationModal();
   initVideoFacades();
+  initTestimonialsCarousel();
 
   document.querySelectorAll('.faq-item').forEach(item => {
     item.addEventListener('toggle', () => {
@@ -402,6 +403,83 @@ function initVideoFacades() {
       facade.replaceWith(iframe);
     });
   });
+}
+
+function initTestimonialsCarousel() {
+  const stage = document.getElementById('tms-stage');
+  if (!stage) return;
+
+  const cards = stage.querySelectorAll('.tms-card');
+  const dots  = document.querySelectorAll('#tms-dots .tms-dot');
+  const prevBtn = document.getElementById('tms-prev');
+  const nextBtn = document.getElementById('tms-next');
+
+  const TOTAL = cards.length;
+  const AUTO_DELAY = 5200;
+  let current = 0;
+  let autoTimer = null;
+
+  function goTo(index) {
+    const next = ((index % TOTAL) + TOTAL) % TOTAL;
+    if (next === current) return;
+
+    cards[current].classList.remove('tms-card--active');
+    cards[current].setAttribute('aria-hidden', 'true');
+    dots[current].classList.remove('tms-dot--active');
+    dots[current].setAttribute('aria-selected', 'false');
+
+    current = next;
+
+    cards[current].classList.add('tms-card--active');
+    cards[current].setAttribute('aria-hidden', 'false');
+    dots[current].classList.add('tms-dot--active');
+    dots[current].setAttribute('aria-selected', 'true');
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(() => goTo(current + 1), AUTO_DELAY);
+  }
+
+  function stopAuto() {
+    clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(parseInt(dot.dataset.tmsTarget, 10));
+      startAuto();
+    });
+  });
+
+  /* Pause on hover / focus inside the stage */
+  stage.addEventListener('mouseenter', stopAuto);
+  stage.addEventListener('mouseleave', startAuto);
+  stage.addEventListener('focusin',  stopAuto);
+  stage.addEventListener('focusout', startAuto);
+
+  /* Keyboard navigation when stage has focus */
+  stage.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1); startAuto(); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); startAuto(); }
+  });
+
+  /* Touch / swipe support */
+  let touchStartX = 0;
+  stage.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', e => {
+    const delta = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 44) {
+      goTo(delta > 0 ? current + 1 : current - 1);
+      startAuto();
+    }
+  }, { passive: true });
+
+  startAuto();
 }
 
 function initAlertFeed() {
