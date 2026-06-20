@@ -79,7 +79,7 @@
       <p class="hero-subtitle" data-section="banner" data-value="subtitle">Real-time collision prevention for autonomous
         mining fleets</p>
       <div class="hero-actions">
-        <a href="#subscription" class="btn-primary" data-section="banner" data-value="cta">Request a Demo</a>
+        <button class="btn-primary" id="hero-cta" onclick="openRegistrationModal()" data-section="banner" data-value="cta">Request a Demo</button>
         <a href="#solution" class="btn-ghost" data-section="banner" data-value="ghost-cta">Learn More</a>
       </div>
     </div>
@@ -726,6 +726,167 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-header">
+      <div class="section-tag" data-section="testimonials" data-value="tag">Clients</div>
+      <h2 class="section-title" data-section="testimonials" data-value="heading">PROVEN IN THE <span class="accent-yellow">FIELD</span></h2>
+      <p class="section-subtitle" data-section="testimonials" data-value="subtitle">Operations directors, safety officers, and fleet supervisors share what happened after deploying MineGuard.</p>
+    </div>
+
+    <div class="tms-wrap fade-up">
+      <div class="tms-stage" id="tms-stage" role="region" aria-label="Testimonial carousel" aria-live="polite">
+
+        <!-- T1 -->
+        <article class="tms-card tms-card--active" data-tms-index="0" aria-hidden="false">
+          <div class="tms-card-accent"></div>
+          <div class="tms-quote-mark">
+            <svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0 26V15.6C0 11.44 1.08 7.92 3.24 5.04C5.48 2.08 8.64 0.24 12.72 0L14.04 2.44C11.44 3.08 9.32 4.44 7.68 6.52C6.12 8.52 5.4 10.72 5.4 13.12H10.8V26H0ZM21.96 26V15.6C21.96 11.44 23.04 7.92 25.2 5.04C27.44 2.08 30.6 0.24 34.68 0L36 2.44C33.4 3.08 31.28 4.44 29.64 6.52C28.08 8.52 27.36 10.72 27.36 13.12H32.76V26H21.96Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <blockquote class="tms-text" data-section="testimonials" data-value="t1-text">"Since deploying MineGuard across our northern sector, we have recorded zero near-miss incidents involving light vehicles in autonomous corridors. The 43ms alert latency is not a marketing figure — our incident logs confirm it independently. This system has fundamentally changed how we approach fleet safety at both a regulatory and human level."</blockquote>
+          <footer class="tms-footer">
+            <div class="tms-footer-rule"></div>
+            <div class="tms-author-row">
+              <div class="tms-author-info">
+                <strong class="tms-name" data-section="testimonials" data-value="t1-name">Carlos Mendoza V.</strong>
+                <span class="tms-role" data-section="testimonials" data-value="t1-role">Director of Operational Safety</span>
+                <span class="tms-company" data-section="testimonials" data-value="t1-company">Antofagasta Minerals &mdash; Chile</span>
+              </div>
+              <div class="tms-kpi">
+                <span class="tms-kpi-val">0</span>
+                <span class="tms-kpi-label" data-section="testimonials" data-value="t1-kpi">incidents · 8 months</span>
+              </div>
+            </div>
+          </footer>
+        </article>
+
+        <!-- T2 -->
+        <article class="tms-card" data-tms-index="1" aria-hidden="true">
+          <div class="tms-card-accent tms-card-accent--blue"></div>
+          <div class="tms-quote-mark tms-quote-mark--blue">
+            <svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0 26V15.6C0 11.44 1.08 7.92 3.24 5.04C5.48 2.08 8.64 0.24 12.72 0L14.04 2.44C11.44 3.08 9.32 4.44 7.68 6.52C6.12 8.52 5.4 10.72 5.4 13.12H10.8V26H0ZM21.96 26V15.6C21.96 11.44 23.04 7.92 25.2 5.04C27.44 2.08 30.6 0.24 34.68 0L36 2.44C33.4 3.08 31.28 4.44 29.64 6.52C28.08 8.52 27.36 10.72 27.36 13.12H32.76V26H21.96Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <blockquote class="tms-text" data-section="testimonials" data-value="t2-text">"Integrating MineGuard with our Modular Mining FMS took under five working days — no firmware changes on our autonomous haul trucks, no downtime, no disruption to the shift cycle. The live dashboard gives my team complete visibility over 34 vehicles simultaneously. Alert classification by criticality level has noticeably reduced false-alarm fatigue across all three of our shifts."</blockquote>
+          <footer class="tms-footer">
+            <div class="tms-footer-rule"></div>
+            <div class="tms-author-row">
+              <div class="tms-author-info">
+                <strong class="tms-name" data-section="testimonials" data-value="t2-name">Valentina Torres R.</strong>
+                <span class="tms-role" data-section="testimonials" data-value="t2-role">Fleet Management Supervisor</span>
+                <span class="tms-company" data-section="testimonials" data-value="t2-company">Codelco Divisi&oacute;n Norte &mdash; Chile</span>
+              </div>
+              <div class="tms-kpi">
+                <span class="tms-kpi-val">&lt;5d</span>
+                <span class="tms-kpi-label" data-section="testimonials" data-value="t2-kpi">FMS integration</span>
+              </div>
+            </div>
+          </footer>
+        </article>
+
+        <!-- T3 -->
+        <article class="tms-card" data-tms-index="2" aria-hidden="true">
+          <div class="tms-card-accent"></div>
+          <div class="tms-quote-mark">
+            <svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0 26V15.6C0 11.44 1.08 7.92 3.24 5.04C5.48 2.08 8.64 0.24 12.72 0L14.04 2.44C11.44 3.08 9.32 4.44 7.68 6.52C6.12 8.52 5.4 10.72 5.4 13.12H10.8V26H0ZM21.96 26V15.6C21.96 11.44 23.04 7.92 25.2 5.04C27.44 2.08 30.6 0.24 34.68 0L36 2.44C33.4 3.08 31.28 4.44 29.64 6.52C28.08 8.52 27.36 10.72 27.36 13.12H32.76V26H21.96Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <blockquote class="tms-text" data-section="testimonials" data-value="t3-text">"Our last MSHA audit was the smoothest in a decade. MineGuard's exportable incident logs, timestamped GPS event records and built-in ISO 21448 compliance documentation removed weeks of manual preparation. The auditors specifically noted our proximity alert response protocol as best-in-class for open-pit operations at our scale."</blockquote>
+          <footer class="tms-footer">
+            <div class="tms-footer-rule"></div>
+            <div class="tms-author-row">
+              <div class="tms-author-info">
+                <strong class="tms-name" data-section="testimonials" data-value="t3-name">Roberto Hidalgo C.</strong>
+                <span class="tms-role" data-section="testimonials" data-value="t3-role">Chief Safety Officer</span>
+                <span class="tms-company" data-section="testimonials" data-value="t3-company">BHP Escondida &mdash; Chile</span>
+              </div>
+              <div class="tms-kpi">
+                <span class="tms-kpi-val">ISO</span>
+                <span class="tms-kpi-label" data-section="testimonials" data-value="t3-kpi">21448 audit certified</span>
+              </div>
+            </div>
+          </footer>
+        </article>
+
+        <!-- T4 -->
+        <article class="tms-card" data-tms-index="3" aria-hidden="true">
+          <div class="tms-card-accent tms-card-accent--blue"></div>
+          <div class="tms-quote-mark tms-quote-mark--blue">
+            <svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0 26V15.6C0 11.44 1.08 7.92 3.24 5.04C5.48 2.08 8.64 0.24 12.72 0L14.04 2.44C11.44 3.08 9.32 4.44 7.68 6.52C6.12 8.52 5.4 10.72 5.4 13.12H10.8V26H0ZM21.96 26V15.6C21.96 11.44 23.04 7.92 25.2 5.04C27.44 2.08 30.6 0.24 34.68 0L36 2.44C33.4 3.08 31.28 4.44 29.64 6.52C28.08 8.52 27.36 10.72 27.36 13.12H32.76V26H21.96Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <blockquote class="tms-text" data-section="testimonials" data-value="t4-text">"Our pit extends below 300 meters where LTE coverage is intermittent at best. Before MineGuard, that meant safety blind spots for light vehicles entering autonomous zones in deep sectors. The self-healing mesh network resolved this entirely — seven synchronized IoT nodes maintain full coverage continuously, and edge computing means no cloud round-trip is ever needed for a critical alert."</blockquote>
+          <footer class="tms-footer">
+            <div class="tms-footer-rule"></div>
+            <div class="tms-author-row">
+              <div class="tms-author-info">
+                <strong class="tms-name" data-section="testimonials" data-value="t4-name">Miguel S&aacute;nchez L.</strong>
+                <span class="tms-role" data-section="testimonials" data-value="t4-role">IT &amp; Infrastructure Manager</span>
+                <span class="tms-company" data-section="testimonials" data-value="t4-company">Cerro Verde Operations &mdash; Per&uacute;</span>
+              </div>
+              <div class="tms-kpi">
+                <span class="tms-kpi-val">300m</span>
+                <span class="tms-kpi-label" data-section="testimonials" data-value="t4-kpi">pit depth covered</span>
+              </div>
+            </div>
+          </footer>
+        </article>
+
+        <!-- T5 -->
+        <article class="tms-card" data-tms-index="4" aria-hidden="true">
+          <div class="tms-card-accent"></div>
+          <div class="tms-quote-mark">
+            <svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0 26V15.6C0 11.44 1.08 7.92 3.24 5.04C5.48 2.08 8.64 0.24 12.72 0L14.04 2.44C11.44 3.08 9.32 4.44 7.68 6.52C6.12 8.52 5.4 10.72 5.4 13.12H10.8V26H0ZM21.96 26V15.6C21.96 11.44 23.04 7.92 25.2 5.04C27.44 2.08 30.6 0.24 34.68 0L36 2.44C33.4 3.08 31.28 4.44 29.64 6.52C28.08 8.52 27.36 10.72 27.36 13.12H32.76V26H21.96Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <blockquote class="tms-text" data-section="testimonials" data-value="t5-text">"In the first month after deployment, our insurance broker revised our operational risk rating downward for the first time in seven years. The combination of real-time alert data, biometric fatigue monitoring and a clean incident-free record gave them measurable evidence of improved risk management. MineGuard paid for itself before the second invoice arrived."</blockquote>
+          <footer class="tms-footer">
+            <div class="tms-footer-rule"></div>
+            <div class="tms-author-row">
+              <div class="tms-author-info">
+                <strong class="tms-name" data-section="testimonials" data-value="t5-name">Andrea Flores M.</strong>
+                <span class="tms-role" data-section="testimonials" data-value="t5-role">Mine Operations Manager</span>
+                <span class="tms-company" data-section="testimonials" data-value="t5-company">Glencore Per&uacute; &mdash; Antapaccay</span>
+              </div>
+              <div class="tms-kpi">
+                <span class="tms-kpi-val">-18%</span>
+                <span class="tms-kpi-label" data-section="testimonials" data-value="t5-kpi">operational insurance</span>
+              </div>
+            </div>
+          </footer>
+        </article>
+
+      </div><!-- /.tms-stage -->
+
+      <div class="tms-controls">
+        <button class="tms-nav-btn" id="tms-prev" aria-label="Previous testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <div class="tms-dots" id="tms-dots" role="tablist" aria-label="Testimonial navigation">
+          <button class="tms-dot tms-dot--active" role="tab" aria-selected="true" aria-label="Testimonial 1 of 5" data-tms-target="0"></button>
+          <button class="tms-dot" role="tab" aria-selected="false" aria-label="Testimonial 2 of 5" data-tms-target="1"></button>
+          <button class="tms-dot" role="tab" aria-selected="false" aria-label="Testimonial 3 of 5" data-tms-target="2"></button>
+          <button class="tms-dot" role="tab" aria-selected="false" aria-label="Testimonial 4 of 5" data-tms-target="3"></button>
+          <button class="tms-dot" role="tab" aria-selected="false" aria-label="Testimonial 5 of 5" data-tms-target="4"></button>
+        </div>
+        <button class="tms-nav-btn" id="tms-next" aria-label="Next testimonial">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+
+    </div><!-- /.tms-wrap -->
+  </section>
+
   <!-- TEAM -->
   <section id="about-the-team">
     <div class="section-header">
@@ -930,104 +1091,245 @@
   <section id="subscription">
     <div class="section-header">
       <div class="section-tag" data-section="subscription" data-value="tag">Pricing</div>
-      <h2 class="section-title" data-section="subscription" data-value="heading">ENTERPRISE <span
-          class="accent-yellow">PLAN</span></h2>
-      <p class="section-subtitle" data-section="subscription" data-value="subtitle">One plan. Full protection. Zero
-        compromise.</p>
+      <h2 class="section-title" data-section="subscription" data-value="heading">CHOOSE YOUR <span
+          class="accent-yellow">PROTECTION</span></h2>
+      <p class="section-subtitle" data-section="subscription" data-value="subtitle">Scale your safety mesh from a pilot
+        deployment to full autonomous fleet coverage.</p>
     </div>
-    <div class="pricing-layout">
-      <div class="pricing-visual fade-up">
-        <div class="mesh-container">
-          <div class="alert-badge-mesh">
-            <span class="abm-pulse"></span>
-            <span data-section="subscription" data-value="alert">Alert Active</span>
-          </div>
-          <svg class="mesh-svg" viewBox="0 0 400 400">
-            <line x1="50" y1="50" x2="200" y2="80" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
-            <line x1="200" y1="80" x2="350" y2="50" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
-            <line x1="50" y1="50" x2="80" y2="200" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
-            <line x1="80" y1="200" x2="200" y2="200" stroke="rgba(37,120,244,0.5)" stroke-width="1.5" />
-            <line x1="200" y1="200" x2="320" y2="200" stroke="rgba(37,120,244,0.5)" stroke-width="1.5" />
-            <line x1="320" y1="200" x2="350" y2="50" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
-            <line x1="200" y1="80" x2="200" y2="200" stroke="rgba(37,120,244,0.4)" stroke-width="1" />
-            <line x1="80" y1="200" x2="120" y2="340" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
-            <line x1="120" y1="340" x2="200" y2="320" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
-            <line x1="200" y1="320" x2="280" y2="340" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
-            <line x1="280" y1="340" x2="320" y2="200" stroke="rgba(37,120,244,0.3)" stroke-width="1" />
-            <line x1="200" y1="200" x2="200" y2="320" stroke="rgba(37,120,244,0.4)" stroke-width="1" />
-            <polygon points="200,80 350,50 320,200 200,200" fill="rgba(37,120,244,0.05)" stroke="rgba(37,120,244,0.15)"
-              stroke-width="1" />
-            <polygon points="80,200 200,200 120,340" fill="rgba(186,26,26,0.08)" stroke="rgba(186,26,26,0.4)"
-              stroke-width="1.5" stroke-dasharray="5,4" />
-          </svg>
-          <div class="mesh-node" style="top:46px;left:46px"></div>
-          <div class="mesh-node" style="top:76px;left:196px"></div>
-          <div class="mesh-node" style="top:46px;left:346px"></div>
-          <div class="mesh-node" style="top:196px;left:76px"></div>
-          <div class="mesh-node mesh-node-active" style="top:196px;left:196px"></div>
-          <div class="mesh-node" style="top:196px;left:316px"></div>
-          <div class="mesh-node" style="top:336px;left:116px"></div>
-          <div class="mesh-node" style="top:316px;left:196px"></div>
-          <div class="mesh-node" style="top:336px;left:276px"></div>
-        </div>
-      </div>
 
-      <div class="pricing-card fade-up">
-        <div class="plan-badge" data-section="subscription" data-value="plan-tag">Enterprise</div>
-        <h3 class="plan-name" data-section="subscription" data-value="plan-name">Full Safety Suite</h3>
-        <div class="plan-price">
-          <span class="pp-currency" data-section="subscription" data-value="currency">$</span>
-          <span class="pp-amount" data-section="subscription" data-value="amount">200</span>
-          <span class="pp-period" data-section="subscription" data-value="period">/unit/month</span>
+    <div class="pricing-grid">
+
+      <!-- Card 1: Malla Preventiva -->
+      <div class="pg-card fade-up" data-tier="starter">
+        <div class="pgc-top-line"></div>
+        <div class="pgc-header">
+          <span class="pgc-badge" data-section="subscription" data-value="p1-badge">Starter</span>
+          <h3 class="pgc-name" data-section="subscription" data-value="p1-name">Malla Preventiva</h3>
+          <p class="pgc-tagline" data-section="subscription" data-value="p1-tagline">Despliegue Piloto</p>
         </div>
-        <p class="plan-min" data-section="subscription" data-value="plan-min">Minimum 10 units &bull; Annual commitment
-        </p>
-        <ul class="plan-features">
+        <div class="pgc-price">
+          <span class="pgc-currency">$</span>
+          <span class="pgc-amount">250</span>
+          <span class="pgc-period" data-section="subscription" data-value="period">/ mes</span>
+        </div>
+        <p class="pgc-desc" data-section="subscription" data-value="p1-desc">Validación en rutas críticas para mitigar
+          riesgos inmediatos.</p>
+        <ul class="pgc-features">
           <li>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            <span data-section="subscription" data-value="feature1">Professional Sensor Installation &amp;
-              Calibration</span>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p1-f1">Hasta 10 Nodos IoT (Vehículos monitoreados)</span>
           </li>
           <li>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            <span data-section="subscription" data-value="feature2">Maximum Detection Range &amp; V2X Capacity</span>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p1-f2">2 Accesos al Centro de Control</span>
           </li>
           <li>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            <span data-section="subscription" data-value="feature3">Real-Time Monitoring Dashboard (24/7)</span>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p1-f3">Alertas en cabina (proximidad y colisión)</span>
           </li>
           <li>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            <span data-section="subscription" data-value="feature4">Anti-Collision V2X Protocol (Full Stack)</span>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p1-f4">Botón de pánico integrado</span>
           </li>
           <li>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            <span data-section="subscription" data-value="feature5">Cloud Data Storage, Analytics &amp; Export</span>
-          </li>
-          <li>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12" />
-            </svg>
-            <span data-section="subscription" data-value="feature6">Dedicated Technical Support &amp; SLA
-              Guarantee</span>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p1-f5">Dashboard de monitoreo básico</span>
           </li>
         </ul>
-        <a href="https://mineguard-iot.netlify.app/iam/sign-in" class="btn-primary btn-full" data-section="subscription"
-          data-value="cta">Get Started</a>
-        <p class="plan-note" data-section="subscription" data-value="footer-note">No hidden fees. Full technical support
-          included.</p>
+        <button class="btn-ghost btn-full pgc-cta"
+          onclick="openRegistrationModal('starter')"
+          data-section="subscription" data-value="p1-cta">Iniciar Piloto</button>
       </div>
+
+      <!-- Card 2: Control Operacional -->
+      <div class="pg-card pg-card--featured fade-up" data-tier="standard">
+        <div class="pgc-top-line"></div>
+        <div class="pgc-recommended-badge" data-section="subscription" data-value="rec-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          Recomendado
+        </div>
+        <div class="pgc-header">
+          <span class="pgc-badge pgc-badge--featured" data-section="subscription" data-value="p2-badge">Estándar de
+            Operación</span>
+          <h3 class="pgc-name" data-section="subscription" data-value="p2-name">Control Operacional</h3>
+          <p class="pgc-tagline" data-section="subscription" data-value="p2-tagline">Expansión de Red</p>
+        </div>
+        <div class="pgc-price">
+          <span class="pgc-currency pgc-currency--featured">$</span>
+          <span class="pgc-amount pgc-amount--featured">499</span>
+          <span class="pgc-period" data-section="subscription" data-value="period">/ mes</span>
+        </div>
+        <p class="pgc-desc" data-section="subscription" data-value="p2-desc">El estándar para operaciones continuas y
+          cumplimiento normativo.</p>
+        <ul class="pgc-features">
+          <li>
+            <span class="pgc-check pgc-check--featured">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p2-f1">Hasta 25 Nodos IoT</span>
+          </li>
+          <li>
+            <span class="pgc-check pgc-check--featured">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p2-f2">5 Accesos al Centro de Control</span>
+          </li>
+          <li>
+            <span class="pgc-check pgc-check--featured">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span class="has-tooltip"
+              data-tooltip="Sistema de visión artificial que detecta signos de somnolencia del conductor en tiempo real."
+              data-section="subscription" data-value="p2-f3">Detección Biométrica de Fatiga</span>
+          </li>
+          <li>
+            <span class="pgc-check pgc-check--featured">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span class="has-tooltip"
+              data-tooltip="Métricas de velocidad, frenos y trayectoria por vehículo. Ranking de riesgo actualizado en tiempo real."
+              data-section="subscription" data-value="p2-f4">Analítica de Desempeño y Ranking de Riesgo</span>
+          </li>
+          <li>
+            <span class="pgc-check pgc-check--featured">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p2-f5">Reportes exportables e historial (30 días)</span>
+          </li>
+        </ul>
+        <button class="btn-primary btn-full pgc-cta"
+          onclick="openRegistrationModal('standard')"
+          data-section="subscription" data-value="p2-cta">Proteger mi Operación</button>
+      </div>
+
+      <!-- Card 3: Ecosistema Autónomo -->
+      <div class="pg-card fade-up" data-tier="enterprise">
+        <div class="pgc-top-line"></div>
+        <div class="pgc-header">
+          <span class="pgc-badge pgc-badge--enterprise" data-section="subscription"
+            data-value="p3-badge">Enterprise</span>
+          <h3 class="pgc-name" data-section="subscription" data-value="p3-name">Ecosistema Autónomo</h3>
+          <p class="pgc-tagline" data-section="subscription" data-value="p3-tagline">Gestión Integral</p>
+        </div>
+        <div class="pgc-price">
+          <span class="pgc-currency">$</span>
+          <span class="pgc-amount">899</span>
+          <span class="pgc-period" data-section="subscription" data-value="period">/ mes</span>
+        </div>
+        <p class="pgc-desc" data-section="subscription" data-value="p3-desc">Monitoreo total y diseño espacial para
+          flotas mixtas robustas.</p>
+        <ul class="pgc-features">
+          <li>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p3-f1">Hasta 50 Nodos IoT</span>
+          </li>
+          <li>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span data-section="subscription" data-value="p3-f2">10 Accesos al Centro de Control</span>
+          </li>
+          <li>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span class="has-tooltip"
+              data-tooltip="Integración con datos LiDAR/DEM para modelar el terreno y definir zonas de exclusión digital."
+              data-section="subscription" data-value="p3-f3">Mapeo topográfico y Geofences (Zonas Restringidas)</span>
+          </li>
+          <li>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span class="has-tooltip"
+              data-tooltip="Visualización de densidad de incidentes por sector para priorizar intervenciones preventivas."
+              data-section="subscription" data-value="p3-f4">Identificación de zonas críticas (Mapas de calor)</span>
+          </li>
+          <li>
+            <span class="pgc-check">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <span class="has-tooltip"
+              data-tooltip="Modelos ML que predicen patrones de riesgo basados en el historial operacional de la flota."
+              data-section="subscription" data-value="p3-f5">Insights automatizados y predictivos</span>
+          </li>
+        </ul>
+        <button class="btn-ghost btn-full pgc-cta pgc-cta--enterprise"
+          onclick="openRegistrationModal('enterprise')"
+          data-section="subscription" data-value="p3-cta">Consultar Integración</button>
+      </div>
+
     </div>
+
+    <p class="pricing-footnote">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="8" x2="12" y2="12" />
+        <line x1="12" y1="16" x2="12.01" y2="16" />
+      </svg>
+      <span data-section="subscription" data-value="footnote">El costo de instalación de hardware IoT en vehículos se
+        cotiza por separado.</span>
+    </p>
   </section>
 
   <!-- FOOTER -->
@@ -1089,6 +1391,130 @@
       </div>
     </div>
   </footer>
+
+  <!-- ══ COMPANY REGISTRATION MODAL ══════════════════ -->
+  <div id="reg-modal" class="reg-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">
+    <div class="reg-panel">
+
+      <!-- Close -->
+      <button class="reg-close" id="reg-close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Header -->
+      <div class="reg-header">
+        <div class="reg-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <div class="reg-tag" data-section="register" data-value="tag">Enterprise Registration</div>
+        <h2 class="reg-title" id="reg-modal-title" data-section="register" data-value="title">Register Your Company</h2>
+        <p class="reg-subtitle" data-section="register" data-value="subtitle">Join MineGuard's enterprise network.</p>
+      </div>
+
+      <!-- Form -->
+      <form id="reg-form" class="reg-form" novalidate>
+
+        <!-- ── SECTION 1: Operation Assessment ───────── -->
+        <div class="reg-section-divider">
+          <span class="reg-section-label" data-section="register" data-value="assess-section">Operation Assessment</span>
+        </div>
+
+        <!-- Fleet Size Slider -->
+        <div class="reg-field reg-field--calc">
+          <div class="reg-calc-header">
+            <label class="reg-label" for="reg-fleet-size" data-section="register" data-value="fleet-size-label">Vehicles / Sensors</label>
+            <span class="reg-calc-val" id="fleet-size-display">25</span>
+          </div>
+          <input class="reg-slider" type="range" id="reg-fleet-size" min="1" max="500" value="25" step="1">
+          <div class="reg-slider-ticks">
+            <span>1</span><span>125</span><span>250</span><span>375</span><span>500</span>
+          </div>
+        </div>
+
+        <!-- Operator Count -->
+        <div class="reg-field reg-field--calc">
+          <div class="reg-calc-header">
+            <label class="reg-label" for="reg-operator-count" data-section="register" data-value="operator-count-label">Operators per Shift</label>
+            <span class="reg-calc-val" id="operator-count-display">10</span>
+          </div>
+          <input class="reg-slider" type="range" id="reg-operator-count" min="1" max="200" value="10" step="1">
+          <div class="reg-slider-ticks">
+            <span>1</span><span>50</span><span>100</span><span>150</span><span>200</span>
+          </div>
+        </div>
+
+        <!-- Recommended Plan Card -->
+        <div class="reg-rec-card" id="reg-rec-card" data-plan="starter">
+          <div class="reg-rec-left">
+            <div class="reg-rec-icon" id="reg-rec-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="reg-rec-label" data-section="register" data-value="rec-label">Recommended Plan</p>
+              <p class="reg-rec-name" id="reg-rec-name">Malla Preventiva</p>
+            </div>
+          </div>
+          <div class="reg-rec-right">
+            <span class="reg-rec-price" id="reg-rec-price">$250<small>/mo</small></span>
+          </div>
+        </div>
+
+        <!-- ── SECTION 2: Company Info ────────────────── -->
+        <div class="reg-section-divider">
+          <span class="reg-section-label" data-section="register" data-value="info-section">Company Information</span>
+        </div>
+
+        <div class="reg-field">
+          <label class="reg-label" for="reg-company-name" data-section="register" data-value="company-name-label">Company Name</label>
+          <input class="reg-input" type="text" id="reg-company-name" autocomplete="organization" data-section-ph="register" data-value-ph="company-name-placeholder">
+          <span class="reg-err" id="err-company-name" aria-live="polite"></span>
+        </div>
+
+        <div class="reg-field">
+          <label class="reg-label" for="reg-admin-name" data-section="register" data-value="admin-name-label">Admin Full Name</label>
+          <input class="reg-input" type="text" id="reg-admin-name" autocomplete="name" data-section-ph="register" data-value-ph="admin-name-placeholder">
+          <span class="reg-err" id="err-admin-name" aria-live="polite"></span>
+        </div>
+
+        <div class="reg-field">
+          <label class="reg-label" for="reg-admin-email" data-section="register" data-value="admin-email-label">Admin Email</label>
+          <input class="reg-input" type="email" id="reg-admin-email" autocomplete="email" data-section-ph="register" data-value-ph="admin-email-placeholder">
+          <span class="reg-err" id="err-admin-email" aria-live="polite"></span>
+        </div>
+
+        <div class="reg-api-err" id="reg-api-err" aria-live="polite" style="display:none"></div>
+
+        <button type="submit" class="btn-primary btn-full reg-submit" id="reg-submit">
+          <span id="reg-btn-text" data-section="register" data-value="submit">Register Company</span>
+          <span class="reg-spinner" id="reg-spinner" aria-hidden="true"></span>
+        </button>
+
+        <p class="reg-disclaimer" data-section="register" data-value="disclaimer">No credit card required. Our team will reach out within 24h.</p>
+      </form>
+
+      <!-- Success state -->
+      <div class="reg-success" id="reg-success" style="display:none">
+        <div class="reg-success-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3 class="reg-success-title" data-section="register" data-value="success-title">Registration Successful</h3>
+        <p class="reg-success-msg" data-section="register" data-value="success-msg">Your company has been registered.</p>
+        <button class="btn-ghost reg-success-close" id="reg-success-close" data-section="register" data-value="success-close">Close</button>
+      </div>
+
+    </div>
+  </div>
+  <!-- ════════════════════════════════════════════════ -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
