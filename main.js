@@ -40,7 +40,7 @@ function t(key) {
 
 /* ── API — FIREWALL: ONLY 3 FIELDS SENT ─────────── */
 async function registerCompany(companyName, adminFullName, adminEmail) {
-  const res = await fetch(`${API_BASE_URL}/api/v1/subscriptions/company-registration`, {
+  const res = await fetch(`${API_BASE_URL}/api/v1/subscriptions`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ companyName, adminFullName, adminEmail }),
