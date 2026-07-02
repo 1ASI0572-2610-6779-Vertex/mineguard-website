@@ -4,7 +4,7 @@
 
 /* ── REGISTRATION MODAL ────────────────────────── */
 
-const API_BASE_URL = 'https://mineguard-webservice.onrender.com/';
+const API_BASE_URL = 'https://mineguard-webservice.onrender.com';
 
 let _currentLangData = {};
 
