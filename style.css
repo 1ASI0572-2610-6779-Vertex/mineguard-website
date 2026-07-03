@@ -2819,9 +2819,9 @@ body::before {
   --surface2: rgba(0, 0, 0, 0.07);
   --glass: rgba(244, 245, 247, 0.85);
   --white: #1C1C2E;
-  --text: #344054;
-  --muted: #667085;
-  --border: rgba(0, 0, 0, 0.1);
+  --text: #2A3542;
+  --muted: #55606F;
+  --border: rgba(0, 0, 0, 0.14);
   --border-y: rgba(252, 181, 2, 0.5);
   --border-b: rgba(37, 120, 244, 0.4);
 }
