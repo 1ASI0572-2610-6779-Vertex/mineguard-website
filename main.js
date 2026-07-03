@@ -313,8 +313,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(() => { });
   }
 
-  const savedLang = localStorage.getItem('mg-lang') || 'en';
-  applyLanguage(savedLang);
+  // Siempre arranca en inglés al abrir la landing; el usuario puede cambiarlo con los botones.
+  applyLanguage('en');
 
   langButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -379,8 +379,8 @@ function initThemeToggle() {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
 
-  const saved = localStorage.getItem('mg-theme') || 'dark';
-  document.documentElement.setAttribute('data-theme', saved);
+  // Siempre arranca en tema claro al abrir la landing; el usuario puede cambiarlo con el toggle.
+  document.documentElement.setAttribute('data-theme', 'light');
 
   btn.addEventListener('click', () => {
     const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
