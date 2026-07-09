@@ -2907,6 +2907,18 @@ body::before {
   border-color: #FCB502;
 }
 
+/* Ghost CTAs sit on light pricing cards — need dark text for contrast */
+[data-theme="light"] .pg-card .btn-ghost {
+  color: var(--white);
+  border-color: var(--border);
+}
+
+[data-theme="light"] .pg-card .btn-ghost:hover {
+  color: #A97800;
+  border-color: #FCB502;
+  background: rgba(252, 181, 2, 0.08);
+}
+
 [data-theme="light"] .hm-value {
   color: #F4F4F5;
 }
