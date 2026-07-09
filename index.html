@@ -84,7 +84,7 @@
       <p class="hero-subtitle" data-section="banner" data-value="subtitle">Real-time collision prevention for autonomous
         mining fleets</p>
       <div class="hero-actions">
-        <button class="btn-primary" id="hero-cta" onclick="openRegistrationModal()" data-section="banner" data-value="cta">Request a Demo</button>
+        <a class="btn-primary" id="hero-cta" href="https://mineguard-iot.netlify.app/register-company" data-section="banner" data-value="cta">Subscribe Now</a>
         <a href="#solution" class="btn-ghost" data-section="banner" data-value="ghost-cta">Learn More</a>
       </div>
     </div>
@@ -996,8 +996,8 @@
           </div>
         </div>
         <div class="tvb-video-area">
-          <div class="video-facade" data-video-id="miKJylB6lu0">
-            <img class="vf-thumbnail" src="https://img.youtube.com/vi/miKJylB6lu0/maxresdefault.jpg"
+          <div class="video-facade" data-video-id="c8lpfZPbnxo">
+            <img class="vf-thumbnail" src="assets/img/team/team.png"
               alt="MineGuard Team Presentation" loading="lazy">
             <div class="vf-overlay"></div>
             <button class="vf-play-btn" aria-label="Play team video">
@@ -1166,9 +1166,9 @@
             <span data-section="subscription" data-value="p1-f5">Dashboard de monitoreo básico</span>
           </li>
         </ul>
-        <button class="btn-ghost btn-full pgc-cta"
-          onclick="openRegistrationModal('starter')"
-          data-section="subscription" data-value="p1-cta">Iniciar Piloto</button>
+        <a class="btn-ghost btn-full pgc-cta"
+          href="https://mineguard-iot.netlify.app/register-company"
+          data-section="subscription" data-value="p1-cta">Iniciar Piloto</a>
       </div>
 
       <!-- Card 2: Control Operacional -->
@@ -1244,9 +1244,9 @@
             <span data-section="subscription" data-value="p2-f5">Reportes exportables e historial (30 días)</span>
           </li>
         </ul>
-        <button class="btn-primary btn-full pgc-cta"
-          onclick="openRegistrationModal('standard')"
-          data-section="subscription" data-value="p2-cta">Proteger mi Operación</button>
+        <a class="btn-primary btn-full pgc-cta"
+          href="https://mineguard-iot.netlify.app/register-company"
+          data-section="subscription" data-value="p2-cta">Proteger mi Operación</a>
       </div>
 
       <!-- Card 3: Ecosistema Autónomo -->
@@ -1318,9 +1318,9 @@
               data-section="subscription" data-value="p3-f5">Insights automatizados y predictivos</span>
           </li>
         </ul>
-        <button class="btn-ghost btn-full pgc-cta pgc-cta--enterprise"
-          onclick="openRegistrationModal('enterprise')"
-          data-section="subscription" data-value="p3-cta">Consultar Integración</button>
+        <a class="btn-ghost btn-full pgc-cta pgc-cta--enterprise"
+          href="https://mineguard-iot.netlify.app/register-company"
+          data-section="subscription" data-value="p3-cta">Consultar Integración</a>
       </div>
 
     </div>
@@ -1396,130 +1396,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ══ COMPANY REGISTRATION MODAL ══════════════════ -->
-  <div id="reg-modal" class="reg-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">
-    <div class="reg-panel">
-
-      <!-- Close -->
-      <button class="reg-close" id="reg-close">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
-
-      <!-- Header -->
-      <div class="reg-header">
-        <div class="reg-icon-wrap">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FCB502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-        </div>
-        <div class="reg-tag" data-section="register" data-value="tag">Enterprise Registration</div>
-        <h2 class="reg-title" id="reg-modal-title" data-section="register" data-value="title">Register Your Company</h2>
-        <p class="reg-subtitle" data-section="register" data-value="subtitle">Join MineGuard's enterprise network.</p>
-      </div>
-
-      <!-- Form -->
-      <form id="reg-form" class="reg-form" novalidate>
-
-        <!-- ── SECTION 1: Operation Assessment ───────── -->
-        <div class="reg-section-divider">
-          <span class="reg-section-label" data-section="register" data-value="assess-section">Operation Assessment</span>
-        </div>
-
-        <!-- Fleet Size Slider -->
-        <div class="reg-field reg-field--calc">
-          <div class="reg-calc-header">
-            <label class="reg-label" for="reg-fleet-size" data-section="register" data-value="fleet-size-label">Vehicles / Sensors</label>
-            <span class="reg-calc-val" id="fleet-size-display">25</span>
-          </div>
-          <input class="reg-slider" type="range" id="reg-fleet-size" min="1" max="500" value="25" step="1">
-          <div class="reg-slider-ticks">
-            <span>1</span><span>125</span><span>250</span><span>375</span><span>500</span>
-          </div>
-        </div>
-
-        <!-- Operator Count -->
-        <div class="reg-field reg-field--calc">
-          <div class="reg-calc-header">
-            <label class="reg-label" for="reg-operator-count" data-section="register" data-value="operator-count-label">Operators per Shift</label>
-            <span class="reg-calc-val" id="operator-count-display">10</span>
-          </div>
-          <input class="reg-slider" type="range" id="reg-operator-count" min="1" max="200" value="10" step="1">
-          <div class="reg-slider-ticks">
-            <span>1</span><span>50</span><span>100</span><span>150</span><span>200</span>
-          </div>
-        </div>
-
-        <!-- Recommended Plan Card -->
-        <div class="reg-rec-card" id="reg-rec-card" data-plan="starter">
-          <div class="reg-rec-left">
-            <div class="reg-rec-icon" id="reg-rec-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-              </svg>
-            </div>
-            <div>
-              <p class="reg-rec-label" data-section="register" data-value="rec-label">Recommended Plan</p>
-              <p class="reg-rec-name" id="reg-rec-name">Malla Preventiva</p>
-            </div>
-          </div>
-          <div class="reg-rec-right">
-            <span class="reg-rec-price" id="reg-rec-price">$250<small>/mo</small></span>
-          </div>
-        </div>
-
-        <!-- ── SECTION 2: Company Info ────────────────── -->
-        <div class="reg-section-divider">
-          <span class="reg-section-label" data-section="register" data-value="info-section">Company Information</span>
-        </div>
-
-        <div class="reg-field">
-          <label class="reg-label" for="reg-company-name" data-section="register" data-value="company-name-label">Company Name</label>
-          <input class="reg-input" type="text" id="reg-company-name" autocomplete="organization" data-section-ph="register" data-value-ph="company-name-placeholder">
-          <span class="reg-err" id="err-company-name" aria-live="polite"></span>
-        </div>
-
-        <div class="reg-field">
-          <label class="reg-label" for="reg-admin-name" data-section="register" data-value="admin-name-label">Admin Full Name</label>
-          <input class="reg-input" type="text" id="reg-admin-name" autocomplete="name" data-section-ph="register" data-value-ph="admin-name-placeholder">
-          <span class="reg-err" id="err-admin-name" aria-live="polite"></span>
-        </div>
-
-        <div class="reg-field">
-          <label class="reg-label" for="reg-admin-email" data-section="register" data-value="admin-email-label">Admin Email</label>
-          <input class="reg-input" type="email" id="reg-admin-email" autocomplete="email" data-section-ph="register" data-value-ph="admin-email-placeholder">
-          <span class="reg-err" id="err-admin-email" aria-live="polite"></span>
-        </div>
-
-        <div class="reg-api-err" id="reg-api-err" aria-live="polite" style="display:none"></div>
-
-        <button type="submit" class="btn-primary btn-full reg-submit" id="reg-submit">
-          <span id="reg-btn-text" data-section="register" data-value="submit">Register Company</span>
-          <span class="reg-spinner" id="reg-spinner" aria-hidden="true"></span>
-        </button>
-
-        <p class="reg-disclaimer" data-section="register" data-value="disclaimer">No credit card required. Our team will reach out within 24h.</p>
-      </form>
-
-      <!-- Success state -->
-      <div class="reg-success" id="reg-success" style="display:none">
-        <div class="reg-success-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-            <polyline points="22 4 12 14.01 9 11.01"/>
-          </svg>
-        </div>
-        <h3 class="reg-success-title" data-section="register" data-value="success-title">Registration Successful</h3>
-        <p class="reg-success-msg" data-section="register" data-value="success-msg">Your company has been registered.</p>
-        <button class="btn-ghost reg-success-close" id="reg-success-close" data-section="register" data-value="success-close">Close</button>
-      </div>
-
-    </div>
-  </div>
-  <!-- ════════════════════════════════════════════════ -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
