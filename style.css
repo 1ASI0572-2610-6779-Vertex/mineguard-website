@@ -1793,14 +1793,19 @@ body::before {
 .team-grid {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   gap: 24px;
+
   position: relative;
   z-index: 1;
 }
 
 .team-card {
+  flex: 0 0 220px;  /* ancho fijo */
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 4px;
