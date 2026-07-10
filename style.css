@@ -1791,7 +1791,9 @@ body::before {
 }
 
 .team-grid {
-  max-width: 1200px;
+  /* 4 cards (220px) + 3 gaps (24px) = exactly 4 per row, so the
+     leftover row of 3 wraps and self-centers via justify-content */
+  max-width: 952px;
   margin: 0 auto;
 
   display: flex;
@@ -2709,6 +2711,11 @@ body::before {
     gap: 32px;
   }
 
+  .team-grid {
+    /* 2 cards (220px) + 1 gap (24px) = exactly 2 per row */
+    max-width: 464px;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 12px;
@@ -2775,6 +2782,11 @@ body::before {
 
   .mv-card {
     padding: 32px 24px;
+  }
+
+  .team-grid {
+    /* 1 card (220px) per row */
+    max-width: 220px;
   }
 }
 
